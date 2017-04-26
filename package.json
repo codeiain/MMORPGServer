@@ -4,6 +4,7 @@
   "description": "node server for mmo rpg",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,16 @@
     "blessed": "^0.1.81",
     "blessed-contrib": "^4.7.5",
     "colors": "^1.1.2",
-    "socket.io": "^1.7.3"
+    "socket.io": "^1.7.3",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9",
+    "mongoose": "^4.6.3",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.1.0",
+    "passport-local": "^1.0.0"
   }
 }
