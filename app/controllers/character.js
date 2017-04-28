@@ -12,17 +12,7 @@ exports.save = function (req, res, next) {
     var Cha = req.body.Cha;
     var Inventory = req.body.Inventory;
 
-    var newCharacter = new Character({
-        playerId: playerId,
-        name: name,
-        Str: Str,
-        Dex: Dex,
-        Con: Con,
-        Int: Int,
-        Wis: Wis,
-        Cha: Cha,
-        Inventory: Inventory
-    });
+
 
     function setCharacterInto(request) {
         return {
@@ -30,27 +20,49 @@ exports.save = function (req, res, next) {
         };
     }
 
-    newCharacter.save(function (err, character) {
-        if (err) {
-            return next(err);
+    Character.findOne({ name: name }, function (err, existingCharacter) {
+
+        if (existingCharacter) {
+            return res.status(422).send({ error: 'That character name is taken' });
         }
-        var characterId = setCharacterInto(character);
-        res.status(201).json({
-            characterId: characterId
+
+        var newCharacter = new Character({
+            playerId: playerId,
+            name: name,
+            Str: Str,
+            Dex: Dex,
+            Con: Con,
+            Int: Int,
+            Wis: Wis,
+            Cha: Cha,
+            Inventory: Inventory
+        });
+
+        newCharacter.save(function (err, character) {
+            if (err) {
+                return next(err);
+            }
+            var characterId = setCharacterInto(character);
+            res.status(201).json({
+                characterId: characterId
+            });
         });
     });
+
+
 };
 
-exports.getCharactersForUser = function(req, res, next){
+exports.getCharactersForUser = function (req, res, next) {
     var playerId = req.body.playerId;
 
-    if (!playerId){
-        return res.status(422).send({error: 'No Characters found.'});
+    if (!playerId) {
+        return res.status(422).send({ error: 'No Characters found.' });
     }
 
-    Character.find({playerId:playerId}, function (err, characters){
+    Character.find({ playerId: playerId }, function (err, characters) {
         res.status(201).json({
-            characters:characters
+            characters: characters
         })
     })
 }
+
