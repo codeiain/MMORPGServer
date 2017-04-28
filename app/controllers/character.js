@@ -4,15 +4,15 @@ exports.save = function (req, res, next) {
 
     var playerId = req.body.playerId;
     var name = req.body.name;
-    var Str = req.body.str;
-    var Dex = req.body.dex;
-    var Con = req.body.con;
-    var Int = req.body.int;
-    var Wis = req.body.wis;
-    var Cha = req.body.cha;
-    var Inventory = req.body.inventory;
+    var Str = req.body.Str;
+    var Dex = req.body.Dex;
+    var Con = req.body.Con;
+    var Int = req.body.Int;
+    var Wis = req.body.Wis;
+    var Cha = req.body.Cha;
+    var Inventory = req.body.Inventory;
 
-    var character = new Character({
+    var newCharacter = new Character({
         playerId: playerId,
         name: name,
         Str: Str,
@@ -30,7 +30,7 @@ exports.save = function (req, res, next) {
         };
     }
 
-    character.save(function (err, character) {
+    newCharacter.save(function (err, character) {
         if (err) {
             return next(err);
         }
@@ -39,5 +39,18 @@ exports.save = function (req, res, next) {
             characterId: characterId
         });
     });
+};
 
+exports.getCharactersForUser = function(req, res, next){
+    var playerId = req.body.playerId;
+
+    if (!playerId){
+        return res.status(422).send({error: 'No Characters found.'});
+    }
+
+    Character.find({playerId:playerId}, function (err, characters){
+        res.status(201).json({
+            characters:characters
+        })
+    })
 }
