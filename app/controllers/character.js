@@ -1,7 +1,6 @@
 var Character = require('../models/character');
 
-exports.save = function (req, res, next) {
-
+exports.save = function(req, res, next) {
     var playerId = req.body.playerId;
     var name = req.body.name;
     var Str = req.body.Str;
@@ -20,7 +19,7 @@ exports.save = function (req, res, next) {
         };
     }
 
-    Character.findOne({ name: name }, function (err, existingCharacter) {
+    Character.findOne({ name: name }, function(err, existingCharacter) {
 
         if (existingCharacter) {
             return res.status(422).send({ error: 'That character name is taken' });
@@ -38,7 +37,7 @@ exports.save = function (req, res, next) {
             Inventory: Inventory
         });
 
-        newCharacter.save(function (err, character) {
+        newCharacter.save(function(err, character) {
             if (err) {
                 return next(err);
             }
@@ -52,17 +51,16 @@ exports.save = function (req, res, next) {
 
 };
 
-exports.getCharactersForUser = function (req, res, next) {
+exports.getCharactersForUser = function(req, res, next) {
     var playerId = req.body.playerId;
 
     if (!playerId) {
         return res.status(422).send({ error: 'No Characters found.' });
     }
 
-    Character.find({ playerId: playerId }, function (err, characters) {
-        res.status(201).json({
+    Character.find({ playerId: playerId }, function(err, characters) {
+        res.status(200).json({
             characters: characters
         })
     })
 }
-

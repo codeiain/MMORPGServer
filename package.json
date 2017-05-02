@@ -4,8 +4,8 @@
     "description": "node server for mmo rpg",
     "main": "server.js",
     "scripts": {
-        "start": "node server.js",
-        "test": "jasmine"
+        "start": "NODE_ENV=dev node server.js",
+        "test": "NODE_ENV=test jasmine"
     },
     "repository": {
         "type": "git",
@@ -27,6 +27,7 @@
         "express": "^4.14.0",
         "jasmine-node": "^1.14.5",
         "jsonwebtoken": "^7.1.9",
+        "mongodb": "^2.2.26",
         "mongoose": "^4.6.3",
         "morgan": "^1.7.0",
         "passport": "^0.3.2",

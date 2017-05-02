@@ -1,3 +1,5 @@
 module.exports = {
-    'url': 'mongodb://localhost/local-dev'
+    'dev': 'mongodb://localhost/local-dev',
+    'test': 'mongodb://localhost/local-test',
+    'uat': 'mongodb://localhost/local-uat'
 }
