@@ -8,7 +8,7 @@ var RaceSchema = new mongoose.Schema({
             type: "String"
         },
         description: {
-            "type": "String"
+            type: "String"
         },
         abilityAdjustments: {
             type: [
@@ -43,7 +43,7 @@ var RaceSchema = new mongoose.Schema({
             ]
         },
         movement: {
-            "type": "Number"
+            type: "Number"
         },
         sight: {
             type: {

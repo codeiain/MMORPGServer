@@ -10,13 +10,19 @@ var router = require('./app/routes');
 
 mongoose.connect(databaseConfig.url);
 
-app.listen(9001);
-console.log('App listening on port 9001');
+var server = app.listen(9001, function() {
+    console.log('App listening on port 9001');
+});
 
-app.use(bodyParser.urlencoded({ extended: false})); // parses urlencoded bodies
+app.use(bodyParser.urlencoded({ extended: false })); // parses urlencoded bodies
 app.use(bodyParser.json()); //send JSON responses
 app.use(logger('dev'));
 app.use(cors());
 app.options('*', cors());
 router(app);
 
+
+
+exports.closeServer = function() {
+    server.close();
+}

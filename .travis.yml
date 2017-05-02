@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+    - "0.12"
+install:
+  - nvm install 6
+  - npm install
+script:
+  - npm test
