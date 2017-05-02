@@ -5,7 +5,7 @@
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
-        "test": "jasmine-node spec --forceexit"
+        "test": "jasmine"
     },
     "repository": {
         "type": "git",
@@ -37,6 +37,7 @@
     },
     "devDependencies": {
         "jasmine": "^2.6.0",
+        "jasmine-spec-reporter": "^4.1.0",
         "request": "^2.81.0"
     }
 }
