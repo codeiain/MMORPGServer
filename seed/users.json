@@ -1,0 +1,1 @@
+[{"_id":{"$oid":"5901a2ba0ccf3e1a10ceab2c"},"updatedAt":{"$date":"2017-04-27T07:50:18.218Z"},"createdAt":{"$date":"2017-04-27T07:50:18.218Z"},"email":"codeiain@outlook.com","password":"$2a$05$X4bNNGr6r6uLBl4U2xPUKu5817tbdmo16mkEZAJyikNIuXy44l98m","role":"player","__v":0}]

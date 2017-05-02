@@ -2,7 +2,7 @@ var request = require("request");
 
 var CharacterController = require('../app/controllers/character');
 var CoreServer = require("../server");
-var base_url = "http://localhost:9001/api/characters"
+var base_url = "http://localhost:9002/api/characters"
 
 describe("Character API Tests", function() {
 
@@ -14,7 +14,7 @@ describe("Character API Tests", function() {
 
         request.post({
             headers: { 'content-type': 'application/json' },
-            url: "http://localhost:9001/api/auth/login",
+            url: "http://localhost:9002/api/auth/login",
             body: JSON.stringify(user)
         }, function(error, response, body) {
             expect(response.statusCode).toBe(200);
@@ -40,7 +40,7 @@ describe("Character API Tests", function() {
 
         request.post({
             headers: { 'content-type': 'application/json' },
-            url: "http://localhost:9001/api/auth/login",
+            url: "http://localhost:9002/api/auth/login",
             body: JSON.stringify(user)
         }, function(error, response, body) {
             expect(response.statusCode).toBe(200);
@@ -48,12 +48,12 @@ describe("Character API Tests", function() {
             var NewCharcter = {
                 name: "test Character",
                 playerId: data.user._id,
-                Cha: 0,
-                Con: 0,
-                Dex: 0,
-                Int: 0,
-                Str: 0,
-                Wis: 0,
+                Cha: 1,
+                Con: 2,
+                Dex: 3,
+                Int: 4,
+                Str: 5,
+                Wis: 6,
                 Inventory: []
             }
             request.post({

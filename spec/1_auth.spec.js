@@ -3,7 +3,7 @@ var request = require("request");
 var CharacterController = require('../app/controllers/authentication');
 var CoreServer = require("../server");
 
-var base_url = "http://localhost:9001/api/auth"
+var base_url = "http://localhost:9002/api/auth"
 
 describe("Auth API Tests", function() {
     it("Post /register returns status code 201", function() {

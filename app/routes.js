@@ -28,8 +28,8 @@ module.exports = function(app) {
     charaterRoutes.post('/createCharacter', requireAuth, AuthenticationController.roleAuthorization(['player', 'admin']), characterController.save)
 
     apiRoutes.use('/races', raceRoutes);
-    raceRoutes.post('/getAllRaces', raceController.getAll);
-    raceRoutes.post('/getByType', raceController.getByType)
+    raceRoutes.post('/getAllRaces', requireAuth, AuthenticationController.roleAuthorization(['player', 'admin']), raceController.getAll);
+    raceRoutes.post('/getByType', requireAuth, AuthenticationController.roleAuthorization(['player', 'admin']), raceController.getByType)
 
     app.use('/api', apiRoutes);
 }

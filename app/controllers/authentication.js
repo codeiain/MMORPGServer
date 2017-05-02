@@ -16,7 +16,7 @@ function setUserInfo(request) {
     };
 }
 
-exports.login = function (req, res, next) {
+exports.login = function(req, res, next) {
 
     var userInfo = setUserInfo(req.user);
     res.status(200).json({
@@ -26,8 +26,7 @@ exports.login = function (req, res, next) {
 
 }
 
-exports.register = function (req, res, next) {
-    console.log('register');
+exports.register = function(req, res, next) {
     var email = req.body.email;
     var password = req.body.password;
     var role = req.body.role;
@@ -40,7 +39,7 @@ exports.register = function (req, res, next) {
         return res.status(422).send({ error: 'You must enter a password' });
     }
 
-    User.findOne({ emai: email }, function (err, existingUser) {
+    User.findOne({ emai: email }, function(err, existingUser) {
         if (err) {
             return next(err);
         }
@@ -55,7 +54,7 @@ exports.register = function (req, res, next) {
             role: role
         });
 
-        user.save(function (err, user) {
+        user.save(function(err, user) {
             if (err) {
                 return next(err);
             }
@@ -69,27 +68,27 @@ exports.register = function (req, res, next) {
     });
 }
 
-exports. roleAuthorization = function(roles){
-    return function(req, res, next){
- 
+exports.roleAuthorization = function(roles) {
+    return function(req, res, next) {
+
         var user = req.user;
- 
-        User.findById(user._id, function(err, foundUser){
- 
-            if(err){
-                res.status(422).json({error: 'No user found.'});
+
+        User.findById(user._id, function(err, foundUser) {
+
+            if (err) {
+                res.status(422).json({ error: 'No user found.' });
                 return next(err);
             }
- 
-            if(roles.indexOf(foundUser.role) > -1){
+
+            if (roles.indexOf(foundUser.role) > -1) {
                 return next();
             }
- 
-            res.status(401).json({error: 'You are not authorized to view this content'});
+
+            res.status(401).json({ error: 'You are not authorized to view this content' });
             return next('Unauthorized');
- 
+
         });
- 
+
     }
 
 }
