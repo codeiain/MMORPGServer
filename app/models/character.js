@@ -1,3 +1,8 @@
+/**
+@module character
+*/
+
+
 var mongoose = require('mongoose');
 
 var CharacterSchema = new mongoose.Schema({

@@ -1,3 +1,7 @@
+/**
+@module authentication
+*/
+
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 
@@ -54,6 +58,7 @@ UserSchema.pre('save', function (next) {
 
 /**
  * Description
+ * @module authentication
  * @method comparePassword
  * @param {} passwordAttempt
  * @param {} cb

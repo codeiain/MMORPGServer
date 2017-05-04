@@ -1,5 +1,6 @@
 /**
 @class authentication
+@module authentication
 */
 
 
@@ -8,9 +9,9 @@ var User = require('../models/user');
 var authConfig = require('../../config/auth');
 
 /**
- * Description
+ * Description generate a JWT Token
  * @method generateToken
- * @param {} user
+ * @param {user} user
  * @return CallExpression
  */
 function generateToken(user) {
@@ -20,9 +21,9 @@ function generateToken(user) {
 }
 
 /**
- * Description
+ * Description creates new user object
  * @method setUserInfo
- * @param {} request
+ * @param {User} request
  * @return ObjectExpression
  */
 function setUserInfo(request) {
@@ -36,10 +37,9 @@ function setUserInfo(request) {
 /**
  * Description
  * @method login
- * @param {} req
+ * @param {req} req
  * @param {} res
  * @param {} next
- * @return 
  */
 exports.login = function(req, res, next) {
 
@@ -57,7 +57,6 @@ exports.login = function(req, res, next) {
  * @param {} req
  * @param {} res
  * @param {} next
- * @return 
  */
 exports.register = function(req, res, next) {
     var email = req.body.email;

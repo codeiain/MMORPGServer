@@ -1,14 +1,15 @@
 
 "use strict";
 var os = require("os");
-/**
-* @class Utils
-*/
+
 
 
 
 module.exports = class Utils {
-
+/**
+* @class Utils
+* @module utils
+*/
 
 
     /**
