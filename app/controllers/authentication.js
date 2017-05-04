@@ -1,3 +1,8 @@
+/**
+@class authentication
+*/
+
+
 var jwt = require('jsonwebtoken');
 var User = require('../models/user');
 var authConfig = require('../../config/auth');

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Utils - MMO Server</title>
+    <title>character - MMO Server</title>
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -74,7 +74,7 @@
                 <div id="docs-main">
                     <div class="content">
 <div class="page-header">
-    <h1>Utils</h1>
+    <h1>character</h1>
 </div>
 
 
@@ -91,9 +91,9 @@
 		<li>
 			<strong>Methods</strong>
 			<ul>
-				<li><a href="#method-comparePassword"><span class="im">comparePassword</span>(<span class="ia">passwordAttempt</span><span class="ia">cb</span>)</a></li>
-				<li><a href="#method-exports"><span class="im">exports</span>(<span class="ia">app</span>)</a></li>
-				<li><a href="#method-sendTime"><span class="im">sendTime</span>()</a></li>
+				<li><a href="#method-getCharactersForUser"><span class="im">getCharactersForUser</span>(<span class="ia">req</span><span class="ia">res</span><span class="ia">next</span>)</a></li>
+				<li><a href="#method-save"><span class="im">save</span>(<span class="ia">req</span><span class="ia">res</span><span class="ia">next</span>)</a></li>
+				<li><a href="#method-setCharacterInto"><span class="im">setCharacterInto</span>(<span class="ia">request</span>)</a></li>
 			</ul>
 		</li>
 
@@ -108,17 +108,20 @@
     <div id="methods" class="page-section">
         <h2 class="off-left">Methods</h2>
         <div class="item-list">
-<div id="method-comparePassword" class="method item">
+<div id="method-getCharactersForUser" class="method item">
 	<div class="method-signature">
-	<span class="name"><code>comparePassword</code></span>
+	<span class="name"><code>getCharactersForUser</code></span>
 
 		<div class="args">
 			<span class="paren">(</span><ul class="args-list inline commas">
 				<li class="arg">
-						<code>passwordAttempt</code>
+						<code>req</code>
 				</li>
 				<li class="arg">
-						<code>cb</code>
+						<code>res</code>
+				</li>
+				<li class="arg">
+						<code>next</code>
 				</li>
 			</ul><span class="paren">)</span>
 		</div>
@@ -135,7 +138,7 @@
 	<div class="meta">
 				<p>
 				Defined in
-		<a href="../files/app_models_user.js.html#l55"><code>app\models\user.js:55</code></a>
+		<a href="../files/app_controllers_character.js.html#l72"><code>app\controllers\character.js:72</code></a>
 		</p>
 
 
@@ -150,14 +153,21 @@
 
 			<ul class="params-list">
 				<li class="param">
-						<code class="param-name">passwordAttempt</code>
+						<code class="param-name">req</code>
 						<span class="type">Object</span>
 
 
 
 				</li>
 				<li class="param">
-						<code class="param-name">cb</code>
+						<code class="param-name">res</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">next</code>
 						<span class="type">Object</span>
 
 
@@ -174,14 +184,20 @@
 		</div>
 
 </div>
-<div id="method-exports" class="method item">
+<div id="method-save" class="method item">
 	<div class="method-signature">
-	<span class="name"><code>exports</code></span>
+	<span class="name"><code>save</code></span>
 
 		<div class="args">
 			<span class="paren">(</span><ul class="args-list inline commas">
 				<li class="arg">
-						<code>app</code>
+						<code>req</code>
+				</li>
+				<li class="arg">
+						<code>res</code>
+				</li>
+				<li class="arg">
+						<code>next</code>
 				</li>
 			</ul><span class="paren">)</span>
 		</div>
@@ -198,7 +214,7 @@
 	<div class="meta">
 				<p>
 				Defined in
-		<a href="../files/app_routes.js.html#l11"><code>app\routes.js:11</code></a>
+		<a href="../files/app_controllers_character.js.html#l7"><code>app\controllers\character.js:7</code></a>
 		</p>
 
 
@@ -213,7 +229,21 @@
 
 			<ul class="params-list">
 				<li class="param">
-						<code class="param-name">app</code>
+						<code class="param-name">req</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">res</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">next</code>
 						<span class="type">Object</span>
 
 
@@ -230,11 +260,17 @@
 		</div>
 
 </div>
-<div id="method-sendTime" class="method item">
+<div id="method-setCharacterInto" class="method item">
 	<div class="method-signature">
-	<span class="name"><code>sendTime</code></span>
+	<span class="name"><code>setCharacterInto</code></span>
 
-		<span class="paren">()</span>
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>request</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
 		<span class="returns-inline">
 			<span class="type"></span>
 		</span>
@@ -248,7 +284,7 @@
 	<div class="meta">
 				<p>
 				Defined in
-		<a href="../files/_server.js.html#l25"><code>_server.js:25</code></a>
+		<a href="../files/app_controllers_character.js.html#l28"><code>app\controllers\character.js:28</code></a>
 		</p>
 
 
@@ -258,11 +294,26 @@
 	<div class="description"><p>Description</p>
 </div>
 
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">request</code>
+						<span class="type">Object</span>
+
+
+
+				</li>
+			</ul>
+		</div>
 
 		<div class="returns">
 			<h4>Returns:</h4>
 
 			<div class="returns-description">
+					<p>ObjectExpression</p>
+
 			</div>
 		</div>
 

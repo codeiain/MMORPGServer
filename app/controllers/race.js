@@ -1,3 +1,8 @@
+/**
+@class race
+*/
+
+
 var Race = require('../models/race');
 
 /**

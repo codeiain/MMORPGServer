@@ -1,17 +1,13 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
-        "Utils"
+        "Utils",
+        "authentication",
+        "character",
+        "race"
     ],
-    "modules": [
-        "character"
-    ],
-    "allModules": [
-        {
-            "displayName": "character",
-            "name": "character"
-        }
-    ],
+    "modules": [],
+    "allModules": [],
     "elements": []
 } };
 });

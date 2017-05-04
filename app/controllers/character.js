@@ -1,5 +1,5 @@
 /**
-@module character
+@class character
 */
 
 var Character = require('../models/character');
