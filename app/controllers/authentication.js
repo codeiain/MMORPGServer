@@ -2,12 +2,24 @@ var jwt = require('jsonwebtoken');
 var User = require('../models/user');
 var authConfig = require('../../config/auth');
 
+/**
+ * Description
+ * @method generateToken
+ * @param {} user
+ * @return CallExpression
+ */
 function generateToken(user) {
     return jwt.sign(user, authConfig.secret, {
         expiresIn: 10080
     });
 }
 
+/**
+ * Description
+ * @method setUserInfo
+ * @param {} request
+ * @return ObjectExpression
+ */
 function setUserInfo(request) {
     return {
         _id: request._id,
@@ -16,6 +28,14 @@ function setUserInfo(request) {
     };
 }
 
+/**
+ * Description
+ * @method login
+ * @param {} req
+ * @param {} res
+ * @param {} next
+ * @return 
+ */
 exports.login = function(req, res, next) {
 
     var userInfo = setUserInfo(req.user);
@@ -26,6 +46,14 @@ exports.login = function(req, res, next) {
 
 }
 
+/**
+ * Description
+ * @method register
+ * @param {} req
+ * @param {} res
+ * @param {} next
+ * @return 
+ */
 exports.register = function(req, res, next) {
     var email = req.body.email;
     var password = req.body.password;
@@ -68,6 +96,12 @@ exports.register = function(req, res, next) {
     });
 }
 
+/**
+ * Description
+ * @method roleAuthorization
+ * @param {} roles
+ * @return FunctionExpression
+ */
 exports.roleAuthorization = function(roles) {
     return function(req, res, next) {
 

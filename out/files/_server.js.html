@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>_server.js - MMO Server</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/lucid.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+            MMO Server
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>0.1.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/Utils", "modules/character"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+<div>
+    <div id="sidebar">
+    <div id="classes">
+        <ul id="api-classes" class="nav nav-list">
+                <li><a href="../classes/Utils.html">Utils</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
+        </div>
+        <div class="span9">
+    <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<div class="page-header">
+    <h1>_server.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums">
+var UI = require(&#x27;./Ui.js&#x27;);
+var ui = new UI();
+var activeUsers = 0;
+
+
+ui.createUI();
+
+let logger = ui.getLogger();
+
+var http = require(&#x27;http&#x27;),
+    fs = require(&#x27;fs&#x27;),
+    // NEVER use a Sync function except at start-up!
+    index = fs.readFileSync(__dirname + &#x27;/index.html&#x27;);
+
+// Send index.html to all requests
+var app = http.createServer(function (req, res) {
+    res.writeHead(200, { &#x27;Content-Type&#x27;: &#x27;text/html&#x27; });
+    res.end(index);
+});
+
+// Socket.io server listens to our app
+var io = require(&#x27;socket.io&#x27;).listen(app);
+
+// Send current time to all connected clients
+/**
+ * Description
+ * @method sendTime
+ * @return 
+ */
+function sendTime() {
+    io.emit(&#x27;time&#x27;, { time: new Date().toJSON() });
+}
+
+
+io.on(&#x27;connection&#x27;, function (socket) {
+    activeUsers++;
+    ui.setActiveUsers(activeUsers);
+    socket.on(&#x27;disconnect&#x27;, function(){
+        activeUsers--;
+        ui.setActiveUsers(activeUsers);
+    });
+});
+
+app.listen(3000);
+logger.Info(&quot;Server listening on port 3000&quot;);
+
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

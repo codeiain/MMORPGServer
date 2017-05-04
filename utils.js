@@ -1,9 +1,17 @@
 
 "use strict";
 var os = require("os");
-
+/**
+* @class Utils
+*/
 module.exports = class Utils {
 
+
+
+    /**
+    * cpuAverage works out average cpu usage
+    * @returns {object}
+    */
     cpuAverage() {
 
         //Initialise sum of idle and time of cores and fetch CPU info
@@ -29,6 +37,10 @@ module.exports = class Utils {
         return { idle: totalIdle / cpus.length, total: totalTick / cpus.length };
     }
 
+    /**
+     * return the current time
+     * @return {string} yy:mm:ss
+     */
     getTime() {
 
         var date = new Date();
@@ -45,7 +57,10 @@ module.exports = class Utils {
         return hour + ":" + min + ":" + sec;
 
     }
-
+    /**
+     * returns the curretn cpu temp only works on linux
+     * @return {string} temp
+     */
     getTemp() {
         var exec = require('child_process').exec;
         exec('vcgencmd measure_temp', function callback(error, stdout, stderr) {

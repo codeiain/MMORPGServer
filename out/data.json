@@ -1,0 +1,440 @@
+{
+    "project": {
+        "name": "MMO Server",
+        "url": "www.example.com",
+        "version": "0.1.0",
+        "description": "node server for mmo rpg"
+    },
+    "files": {
+        "app\\controllers\\authentication.js": {
+            "name": "app\\controllers\\authentication.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app\\controllers\\character.js": {
+            "name": "app\\controllers\\character.js",
+            "modules": {
+                "character": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app\\controllers\\race.js": {
+            "name": "app\\controllers\\race.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app\\models\\user.js": {
+            "name": "app\\models\\user.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "app\\routes.js": {
+            "name": "app\\routes.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "_server.js": {
+            "name": "_server.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "server.js": {
+            "name": "server.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "utils.js": {
+            "name": "utils.js",
+            "modules": {},
+            "classes": {
+                "Utils": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "character": {
+            "name": "character",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Utils": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "utils.js",
+            "line": 4
+        }
+    },
+    "classes": {
+        "Utils": {
+            "name": "Utils",
+            "shortname": "Utils",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "character",
+            "namespace": "",
+            "file": "utils.js",
+            "line": 4
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "app\\controllers\\authentication.js",
+            "line": 5,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "generateToken",
+            "params": [
+                {
+                    "name": "user",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "CallExpression"
+            },
+            "class": "Utils"
+        },
+        {
+            "file": "app\\controllers\\authentication.js",
+            "line": 17,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "setUserInfo",
+            "params": [
+                {
+                    "name": "request",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "ObjectExpression"
+            },
+            "class": "Utils"
+        },
+        {
+            "file": "app\\controllers\\authentication.js",
+            "line": 31,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "login",
+            "params": [
+                {
+                    "name": "req",
+                    "description": ""
+                },
+                {
+                    "name": "res",
+                    "description": ""
+                },
+                {
+                    "name": "next",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Utils"
+        },
+        {
+            "file": "app\\controllers\\authentication.js",
+            "line": 49,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "register",
+            "params": [
+                {
+                    "name": "req",
+                    "description": ""
+                },
+                {
+                    "name": "res",
+                    "description": ""
+                },
+                {
+                    "name": "next",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Utils"
+        },
+        {
+            "file": "app\\controllers\\authentication.js",
+            "line": 99,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "roleAuthorization",
+            "params": [
+                {
+                    "name": "roles",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "FunctionExpression"
+            },
+            "class": "Utils"
+        },
+        {
+            "file": "app\\controllers\\character.js",
+            "line": 7,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "save",
+            "params": [
+                {
+                    "name": "req",
+                    "description": ""
+                },
+                {
+                    "name": "res",
+                    "description": ""
+                },
+                {
+                    "name": "next",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Utils",
+            "module": "character"
+        },
+        {
+            "file": "app\\controllers\\character.js",
+            "line": 28,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "setCharacterInto",
+            "params": [
+                {
+                    "name": "request",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "ObjectExpression"
+            },
+            "class": "Utils",
+            "module": "character"
+        },
+        {
+            "file": "app\\controllers\\character.js",
+            "line": 72,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getCharactersForUser",
+            "params": [
+                {
+                    "name": "req",
+                    "description": ""
+                },
+                {
+                    "name": "res",
+                    "description": ""
+                },
+                {
+                    "name": "next",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Utils",
+            "module": "character"
+        },
+        {
+            "file": "app\\controllers\\race.js",
+            "line": 3,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getAll",
+            "params": [
+                {
+                    "name": "req",
+                    "description": ""
+                },
+                {
+                    "name": "res",
+                    "description": ""
+                },
+                {
+                    "name": "next",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Utils",
+            "module": "character"
+        },
+        {
+            "file": "app\\controllers\\race.js",
+            "line": 23,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getByType",
+            "params": [
+                {
+                    "name": "req",
+                    "description": ""
+                },
+                {
+                    "name": "res",
+                    "description": ""
+                },
+                {
+                    "name": "next",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Utils",
+            "module": "character"
+        },
+        {
+            "file": "app\\models\\user.js",
+            "line": 55,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "comparePassword",
+            "params": [
+                {
+                    "name": "passwordAttempt",
+                    "description": ""
+                },
+                {
+                    "name": "cb",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Utils",
+            "module": "character"
+        },
+        {
+            "file": "app\\routes.js",
+            "line": 11,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "exports",
+            "params": [
+                {
+                    "name": "app",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Utils",
+            "module": "character"
+        },
+        {
+            "file": "_server.js",
+            "line": 25,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "sendTime",
+            "return": {
+                "description": ""
+            },
+            "class": "Utils",
+            "module": "character"
+        },
+        {
+            "file": "server.js",
+            "line": 1,
+            "description": "This is a comment.",
+            "class": "Utils",
+            "module": "character"
+        },
+        {
+            "file": "utils.js",
+            "line": 11,
+            "description": "cpuAverage works out average cpu usage",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "Utils",
+            "module": "character"
+        },
+        {
+            "file": "utils.js",
+            "line": 40,
+            "description": "return the current time",
+            "return": {
+                "description": "yy:mm:ss",
+                "type": "String"
+            },
+            "class": "Utils",
+            "module": "character"
+        },
+        {
+            "file": "utils.js",
+            "line": 60,
+            "description": "returns the curretn cpu temp only works on linux",
+            "return": {
+                "description": "temp",
+                "type": "String"
+            },
+            "class": "Utils",
+            "module": "character"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " utils.js:11"
+        },
+        {
+            "message": "Missing item type\nThis is a comment.",
+            "line": " server.js:1"
+        },
+        {
+            "message": "Missing item type\ncpuAverage works out average cpu usage",
+            "line": " utils.js:11"
+        },
+        {
+            "message": "Missing item type\nreturn the current time",
+            "line": " utils.js:40"
+        },
+        {
+            "message": "Missing item type\nreturns the curretn cpu temp only works on linux",
+            "line": " utils.js:60"
+        }
+    ]
+}

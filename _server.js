@@ -22,6 +22,11 @@ var app = http.createServer(function (req, res) {
 var io = require('socket.io').listen(app);
 
 // Send current time to all connected clients
+/**
+ * Description
+ * @method sendTime
+ * @return 
+ */
 function sendTime() {
     io.emit('time', { time: new Date().toJSON() });
 }

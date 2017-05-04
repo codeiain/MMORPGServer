@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>utils.js - MMO Server</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/lucid.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+            MMO Server
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>0.1.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/Utils", "modules/character"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+<div>
+    <div id="sidebar">
+    <div id="classes">
+        <ul id="api-classes" class="nav nav-list">
+                <li><a href="../classes/Utils.html">Utils</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
+        </div>
+        <div class="span9">
+    <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<div class="page-header">
+    <h1>utils.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums">
+
+&quot;use strict&quot;;
+var os = require(&quot;os&quot;);
+/**
+* @class Utils
+*/
+module.exports = class Utils {
+
+
+
+    /**
+    * cpuAverage works out average cpu usage
+    * @returns {object}
+    */
+    cpuAverage() {
+
+        //Initialise sum of idle and time of cores and fetch CPU info
+        var totalIdle = 0, totalTick = 0;
+        var cpus = os.cpus();
+
+        //Loop through CPU cores
+        for (var i = 0, len = cpus.length; i &lt; len; i++) {
+
+            //Select CPU core
+            var cpu = cpus[i];
+
+            //Total up the time in the cores tick
+            for (let type in cpu.times) {
+                totalTick += cpu.times[type];
+            }
+
+            //Total up the idle time of the core
+            totalIdle += cpu.times.idle;
+        }
+
+        //Return the average Idle and Tick times
+        return { idle: totalIdle / cpus.length, total: totalTick / cpus.length };
+    }
+
+    /**
+     * return the current time
+     * @return {string} yy:mm:ss
+     */
+    getTime() {
+
+        var date = new Date();
+
+        var hour = date.getHours();
+        hour = (hour &lt; 10 ? &quot;0&quot; : &quot;&quot;) + hour;
+
+        var min = date.getMinutes();
+        min = (min &lt; 10 ? &quot;0&quot; : &quot;&quot;) + min;
+
+        var sec = date.getSeconds();
+        sec = (sec &lt; 10 ? &quot;0&quot; : &quot;&quot;) + sec;
+
+        return hour + &quot;:&quot; + min + &quot;:&quot; + sec;
+
+    }
+    /**
+     * returns the curretn cpu temp only works on linux
+     * @return {string} temp
+     */
+    getTemp() {
+        var exec = require(&#x27;child_process&#x27;).exec;
+        exec(&#x27;vcgencmd measure_temp&#x27;, function callback(error, stdout, stderr) {
+            var currentTemp = stdout.replace(&#x27;temp=&#x27;, &#x27;&#x27;).replace(&#x27;\&#x27;C&#x27;, &#x27;&#x27;);
+            return currentTemp;
+        });
+    }
+
+}
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

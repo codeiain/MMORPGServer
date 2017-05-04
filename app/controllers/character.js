@@ -1,5 +1,17 @@
+/**
+@module character
+*/
+
 var Character = require('../models/character');
 
+/**
+ * Description
+ * @method save
+ * @param {} req
+ * @param {} res
+ * @param {} next
+ * @return 
+ */
 exports.save = function(req, res, next) {
     var playerId = req.body.playerId;
     var name = req.body.name;
@@ -13,6 +25,12 @@ exports.save = function(req, res, next) {
 
 
 
+    /**
+     * Description
+     * @method setCharacterInto
+     * @param {} request
+     * @return ObjectExpression
+     */
     function setCharacterInto(request) {
         return {
             _id: request._is
@@ -51,6 +69,14 @@ exports.save = function(req, res, next) {
 
 };
 
+/**
+ * Description
+ * @method getCharactersForUser
+ * @param {} req
+ * @param {} res
+ * @param {} next
+ * @return 
+ */
 exports.getCharactersForUser = function(req, res, next) {
     var playerId = req.body.playerId;
 
