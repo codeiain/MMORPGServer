@@ -91,3 +91,20 @@ exports.getCharactersForUser = function(req, res, next) {
         })
     })
 }
+
+exports.validateCharacterName = function(req, res, next) {
+    var Name = req.body.characterName;
+
+    Character.find({ name: characterName }, function(err, character) {
+        if (err) {
+
+        }
+        if (!character) {
+            res.status(200).send();
+        } else {
+            res.status(422).send({ error: 'Character\'s Name Exists' });
+        }
+
+    })
+
+}

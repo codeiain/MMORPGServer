@@ -30,12 +30,13 @@ module.exports = function(app) {
     });
 
     apiRoutes.use('/characters', charaterRoutes);
-    charaterRoutes.post('/getPlayerCharacters', requireAuth, AuthenticationController.roleAuthorization(['player', 'admin']), characterController.getCharactersForUser)
-    charaterRoutes.post('/createCharacter', requireAuth, AuthenticationController.roleAuthorization(['player', 'admin']), characterController.save)
+    charaterRoutes.post('/getPlayerCharacters', requireAuth, AuthenticationController.roleAuthorization(['player', 'admin']), characterController.getCharactersForUser);
+    charaterRoutes.post('/createCharacter', requireAuth, AuthenticationController.roleAuthorization(['player', 'admin']), characterController.save);
+    charaterRoutes.post('/validateName', requireAuth, AuthenticationController.roleAuthorization(['player', 'admin']), characterController.validateCharacterName);
 
     apiRoutes.use('/races', raceRoutes);
     raceRoutes.post('/getAllRaces', requireAuth, AuthenticationController.roleAuthorization(['player', 'admin']), raceController.getAll);
-    raceRoutes.post('/getByType', requireAuth, AuthenticationController.roleAuthorization(['player', 'admin']), raceController.getByType)
+    raceRoutes.post('/getByType', requireAuth, AuthenticationController.roleAuthorization(['player', 'admin']), raceController.getByType);
 
     app.use('/api', apiRoutes);
 }
