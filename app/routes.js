@@ -1,6 +1,7 @@
 var AuthenticationController = require('./controllers/authentication'),
     characterController = require('./controllers/character'),
     raceController = require('./controllers/race');
+    classController = require('./controllers/classes');
 express = require('express'),
     passportService = require('../config/passport'),
     passport = require('passport');
@@ -19,6 +20,7 @@ module.exports = function(app) {
         authRoutes = express.Router(),
         charaterRoutes = express.Router(),
         raceRoutes = express.Router();
+        classesRoutes = express.Router();
 
     apiRoutes.use('/auth', authRoutes);
 
@@ -37,6 +39,9 @@ module.exports = function(app) {
     apiRoutes.use('/races', raceRoutes);
     raceRoutes.post('/getAllRaces', requireAuth, AuthenticationController.roleAuthorization(['player', 'admin']), raceController.getAll);
     raceRoutes.post('/getByType', requireAuth, AuthenticationController.roleAuthorization(['player', 'admin']), raceController.getByType);
+
+    apiRoutes.use('/classes', classesRoutes);
+    classesRoutes.post('/getAll', requireAuth,AuthenticationController.roleAuthorization(['player','admin']),classController.getAll);
 
     app.use('/api', apiRoutes);
 }
