@@ -1,5 +1,4 @@
 var request = require("request");
-var mongoSeed = require('mongo-seed');
 var path = require('path');
 var RaceController = require('../app/controllers/race');
 var CoreServer = require("../server");
