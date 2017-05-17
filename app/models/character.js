@@ -16,13 +16,11 @@ var CharacterSchema = new mongoose.Schema({
         required: true
     },
     class: {
-        type: String,
-            required: true
+        type: String
     },
     level: Number,
     race: {
-        type: String,
-        required: true
+        type: String
     },
     gender: String,
     str: {

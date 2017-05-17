@@ -6,7 +6,7 @@ exports.getAll = function(req, res, next){
         if (err){
             console.log(err);
         }
-        res.status(200),json({
+        res.status(200).json({
             classes:classes
         })
     })

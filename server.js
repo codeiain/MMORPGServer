@@ -18,13 +18,18 @@ var db = undefined;
 
 var port = undefined;
 var seedPath = path.resolve(__dirname + "/seed/");
+var UI = require('./Ui.js');
+
+var logger;
+var socketServer = require('./socketServer');
+
 switch (process.env.NODE_ENV) {
     case 'dev':
         console.log("using Dev DB");
         db = mongoose.connect(databaseConfig.dev);
-        port = portsConfig.dev;
-
-        mongoSeed.load("localhost", 27017, "local-dev", seedPath, "dir", function(err) {
+        port = portsConfig.api.dev;
+        console.log(portsConfig.api.dev);
+        mongoSeed.load("localhost", 27017, "local-dev", seedPath, "dir", function (err) {
             if (err) {
                 console.log('error seeding db: ' + err)
             }
@@ -33,10 +38,10 @@ switch (process.env.NODE_ENV) {
     case 'test':
         console.log("using Test DB");
         db = mongoose.connect(databaseConfig.test);
-        port = portsConfig.test;
-        mongoSeed.clear("localhost", 27017, "local-test", function(err) {
+        port = portsConfig.api.test;
+        mongoSeed.clear("localhost", 27017, "local-test", function (err) {
             console.log('cleared db');
-            mongoSeed.load("localhost", 27017, "local-test", seedPath, "dir", function(err) {
+            mongoSeed.load("localhost", 27017, "local-test", seedPath, "dir", function (err) {
                 if (err) {
                     console.log('error seeding db: ' + err)
                 } else {
@@ -48,23 +53,28 @@ switch (process.env.NODE_ENV) {
     default:
         console.log("using Dev DB");
         db = mongoose.connect(databaseConfig.dev);
-        port = portsConfig.dev;
-        mongoSeed.clear("localhost", 27017, "local-dev", function(err) {
-            mongoSeed.load("localhost", 27017, "local-dev", seedPath, "dir", function(err) {
+        port = portsConfig.api.dev;
+        mongoSeed.clear("localhost", 27017, "local-dev", function (err) {
+            mongoSeed.load("localhost", 27017, "local-dev", seedPath, "dir", function (err) {
                 if (err) {
                     console.log('error seeding db: ' + err)
                 }
             });
         });
-
         break;
 }
 
-
-var server = app.listen(port, function() {
-
+console.log(port);
+var server = app.listen(port, function () {
+    var ui = new UI();
+    ui.createUI();
+    logger = ui.getLogger();
+    new socketServer(logger);
+    logger.Info('API listening on port ' + port);
+    logger.Info('Connected to DB ' + db.connections[0].name);
     console.log('App listening on port ' + port);
     console.log('Conencted to DB ' + db.connections[0].name);
+
 });
 
 app.use(bodyParser.urlencoded({ extended: false })); // parses urlencoded bodies

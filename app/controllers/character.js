@@ -16,12 +16,12 @@ var Character = require('../models/character');
 exports.save = function(req, res, next) {
     var playerId = req.body.playerId;
     var name = req.body.name;
-    var Str = req.body.Str;
-    var Dex = req.body.Dex;
-    var Con = req.body.Con;
-    var Int = req.body.Int;
-    var Wis = req.body.Wis;
-    var Cha = req.body.Cha;
+    var Str = req.body.str;
+    var Dex = req.body.dex;
+    var Con = req.body.con;
+    var Int = req.body.int;
+    var Wis = req.body.wis;
+    var Cha = req.body.cha;
     var Inventory = req.body.Inventory;
 
 
@@ -47,12 +47,12 @@ exports.save = function(req, res, next) {
         var newCharacter = new Character({
             playerId: playerId,
             name: name,
-            Str: Str,
-            Dex: Dex,
-            Con: Con,
-            Int: Int,
-            Wis: Wis,
-            Cha: Cha,
+            str: Str,
+            dex: Dex,
+            con: Con,
+            int: Int,
+            wis: Wis,
+            cha: Cha,
             Inventory: Inventory
         });
 
