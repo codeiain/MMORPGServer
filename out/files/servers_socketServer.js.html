@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>servers/socketServer.js - MMO Server</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="MMO Server" src="../assets/css/logo.png" style="max-height: 65%;" title="MMO Server">
+            MMO Server
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>0.1.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/api", "classes/authentication", "classes/Character", "classes/characterManager", "classes/classes", "classes/race", "classes/socketServer", "classes/ToDo", "classes/UI", "classes/UIUtils", "modules/api", "modules/authentication", "modules/character", "modules/socket", "modules/startServer", "modules/UI"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/api.html">api</a></li>
+	                            <li><a href="../classes/authentication.html">authentication</a></li>
+	                            <li><a href="../classes/Character.html">Character</a></li>
+	                            <li><a href="../classes/characterManager.html">characterManager</a></li>
+	                            <li><a href="../classes/classes.html">classes</a></li>
+	                            <li><a href="../classes/race.html">race</a></li>
+	                            <li><a href="../classes/socketServer.html">socketServer</a></li>
+	                            <li><a href="../classes/ToDo.html">ToDo</a></li>
+	                            <li><a href="../classes/UI.html">UI</a></li>
+	                            <li><a href="../classes/UIUtils.html">UIUtils</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/api.html">api</a></li>
+	                            <li><a href="../modules/authentication.html">authentication</a></li>
+	                            <li><a href="../modules/character.html">character</a></li>
+	                            <li><a href="../modules/socket.html">socket</a></li>
+	                            <li><a href="../modules/startServer.html">startServer</a></li>
+	                            <li><a href="../modules/UI.html">UI</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<div class="page-header">
+    <h1>servers/socketServer.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums">
+
+
+/**
+ * 
+ * 
+ */
+module.exports = class socketServer {
+
+
+    /**
+     * Creates an instance of socketServer.
+     * @constructor
+     * @class socketServer
+     * @description Manages ingame socket menthods
+     * @module socket
+     * @memberof socketServer
+     * @param {any} config 
+     * @param {any} ui 
+     * @param {any} logger 
+     */
+    constructor(config, ui, logger) {
+        var _self = this;
+        let express = require(&#x27;express&#x27;);
+        let app = express();
+        this.config = config;
+        this.server = require(&#x27;http&#x27;).createServer(app)
+        this.io = require(&#x27;socket.io&#x27;).listen(this.server)
+        this.ui = ui;
+        this.activeUsers = 0;
+        this.logger = logger;
+        _self.port = _self.config.socket;
+
+        this.ui.setActiveUsers(this.activeUsers);
+        this.server.listen(_self.port, () =&gt; {
+            _self.logger.Info(&quot;Socket listening on port &quot; + _self.port);
+        });
+
+        _self.io.on(&#x27;connection&#x27;, (socket) =&gt; {
+            var ip = socket.handshake.address;
+            if (ip != &#x27;::1&#x27;) {
+                _self.getUserLocation(ip);
+            }
+            _self.activeUsers++;
+            _self.ui.setActiveUsers(activeUsers);
+            _self.socket.on(&#x27;disconnect&#x27;, function () {
+                _self.activeUsers--;
+                _self.ui.setActiveUsers(_self.activeUsers);
+            })
+
+            _self.socket.on(&#x27;characterUpdated&#x27;, (character) =&gt; { 
+                characterUpdated(character)
+            });
+        })
+
+    }
+
+    /**
+     * sends changes to characters to all other players
+     * @method characterUpdated
+     * @memberof socketServer
+     * @param {any} character 
+     */
+    characterUpdated(character){
+
+    }
+
+
+    /**
+     * gets the user location based on there ip and creates a new map marker
+     * 
+     * @method getUserLocation
+     * @memberof socketServer
+     * @param {any} ip 
+     */
+    getUserLocation(ip) {
+        let http = require(&#x27;http&#x27;);
+        return http.get({
+            host: &#x27;ipinfo.io&#x27;,
+            path: &#x27;/&#x27; + ip + &#x27;/json&#x27;
+        }, function (response) {
+            // Continuously update stream with data
+            var body = &#x27;&#x27;;
+            response.on(&#x27;data&#x27;, function (d) {
+                body += d;
+            });
+            response.on(&#x27;end&#x27;, function () {
+
+                // Data reception is done, do whatever with it!
+                var parsed = JSON.parse(body);
+                // var lon, lat;
+                // lon = parsed.loc.spit(&#x27;,&#x27;)[0];
+                // lat = parsed.loc.spit(&#x27;,&#x27;)[1];
+                // setMapMarker(lon, lat);
+            });
+        });
+        //https://ipinfo.io/8.8.8.8/json
+    }
+}
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

@@ -1,0 +1,2670 @@
+[{
+"name":"Barbarian",
+"description":"Savage warriors from truly rural areas.",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Bard",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"War Bard",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Cleric",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Druid",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Fighter",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Monk",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Paladin",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Scout",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Ranger",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Rouge",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Sorcerer",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Wizard",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Arcane Mechanik",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"BaBodgerrd",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Fell Caller",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+},{
+    "name":"Gun Mage",
+"description":"Gifted – or cursed – from birth with sorcery, and they tend to join the military to legitimize their abilities. Due to the suspicion of arcane magic and sorcerers in the Iron Kingdoms, many folk with the gift of sorcery pursue the life of a war-band",
+    "hitDie":"d12",
+    "classSkills":[
+        "Climb","Craft", "Handle Animal", "Intimidate","Jump", "Listen","Ride","Survival", "Swim"
+    ],
+    "skillPointBase":{
+        "value":4,
+        "statModifier":"int",
+        "mutiplyer":4
+    },
+    "skillPointsPerLevel":{
+        "value":4,
+        "statModifier":"int"
+    },
+    "levels":[{
+        "level":1,
+        "baseAttackBonus":[1],
+        "fortSave":2,
+        "refSave":0,
+        "willSave":0,
+        "special":["Fast Movement", "illiteracy"]
+    },{
+        "level":2,
+        "baseAttackBonus":[2],
+        "fortSave":3,
+        "refSave":0,
+        "willSave":0,
+        "special":["Uncanny dodge"]
+    },{
+        "level":3,
+        "baseAttackBonus":[3],
+        "fortSave":3,
+        "refSave":1,
+        "willSave":1,
+        "special":["Trap sence +1"]
+    },{
+        "level":4,
+        "baseAttackBonus":[4],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Rage 2/day"]
+    },{
+        "level":5,
+        "baseAttackBonus":[5],
+        "fortSave":4,
+        "refSave":1,
+        "willSave":1,
+        "special":["Improved uncanny dodge"]
+    },{
+        "level":6,
+        "baseAttackBonus":[6,1],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Trap sence +2"]
+    },{
+        "level":7,
+        "baseAttackBonus":[7,2],
+        "fortSave":5,
+        "refSave":2,
+        "willSave":2,
+        "special":["Damage reduction 1/-"]
+    },{
+        "level":8,
+        "baseAttackBonus":[8,2],
+        "fortSave":6,
+        "refSave":2,
+        "willSave":2,
+        "special":["Rage 3/day"]
+    },{
+        "level":9,
+        "baseAttackBonus":[9,4],
+        "fortSave":6,
+        "refSave":3,
+        "willSave":3,
+        "special":["Trap sence +3"]
+    },{
+        "level":10,
+        "baseAttackBonus":[10,5],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Damage reduction 2/-"]
+    },{
+        "level":11,
+        "baseAttackBonus":[11,6,1],
+        "fortSave":7,
+        "refSave":3,
+        "willSave":3,
+        "special":["Greater rage"]
+    },{
+        "level":12,
+        "baseAttackBonus":[12,7,2],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Rage 4/day", "Trap sence +4"]
+    },{
+        "level":13,
+        "baseAttackBonus":[13,8,3],
+        "fortSave":8,
+        "refSave":4,
+        "willSave":4,
+        "special":["Damage reduction 3/-"]
+    },{
+        "level":14,
+        "baseAttackBonus":[14,9,4],
+        "fortSave":9,
+        "refSave":4,
+        "willSave":4,
+        "special":["Indomitable will"]
+    },{
+        "level":15,
+        "baseAttackBonus":[15,10,5],
+        "fortSave":9,
+        "refSave":5,
+        "willSave":5,
+        "special":["Trap sence +5"]
+    },{
+        "level":16,
+        "baseAttackBonus":[16,11,6,1],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Damage reduction 4/-"]
+    },{
+        "level":17,
+        "baseAttackBonus":[17,12,7,2],
+        "fortSave":10,
+        "refSave":5,
+        "willSave":5,
+        "special":["Tireless rage"]
+    },{
+        "level":18,
+        "baseAttackBonus":[18,13,8,3],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Trap sence +6"]
+    },{
+        "level":19,
+        "baseAttackBonus":[19,14,9,4],
+        "fortSave":11,
+        "refSave":6,
+        "willSave":6,
+        "special":["Damage reduction 5/-"]
+    },{
+        "level":20,
+        "baseAttackBonus":[20,15,10,5],
+        "fortSave":12,
+        "refSave":6,
+        "willSave":6,
+        "special":["Mighty rage", "Rage 6/day"]
+    }]
+}]
