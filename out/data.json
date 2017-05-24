@@ -89,6 +89,13 @@
             "fors": {},
             "namespaces": {}
         },
+        "out/assets/vendor/bootstrap/js/bootstrap.min.js": {
+            "name": "out/assets/vendor/bootstrap/js/bootstrap.min.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "servers/apiServer.js": {
             "name": "servers/apiServer.js",
             "modules": {
@@ -109,13 +116,6 @@
             "classes": {
                 "socketServer": 1
             },
-            "fors": {},
-            "namespaces": {}
-        },
-        "server.js": {
-            "name": "server.js",
-            "modules": {},
-            "classes": {},
             "fors": {},
             "namespaces": {}
         },
@@ -324,6 +324,7 @@
             "file": "gameMangment/characterManager.js",
             "line": 6,
             "description": "Creates an instance of characterManger.",
+            "is_constructor": 1,
             "memberof": "characterManager"
         },
         "api": {
@@ -679,7 +680,7 @@
         {
             "file": "api/controllers/character.js",
             "line": 66,
-            "description": "Description",
+            "description": "gets the users characters",
             "itemtype": "method",
             "name": "getCharactersForUser",
             "params": [
@@ -703,8 +704,36 @@
             "module": "api"
         },
         {
+            "file": "api/controllers/character.js",
+            "line": 88,
+            "description": "Validated the character name",
+            "validatecharctername": "",
+            "params": [
+                {
+                    "name": "req",
+                    "description": "",
+                    "type": "Any"
+                },
+                {
+                    "name": "res",
+                    "description": "",
+                    "type": "Any"
+                },
+                {
+                    "name": "next",
+                    "description": "",
+                    "type": "Any"
+                }
+            ],
+            "class": "Character",
+            "module": "api"
+        },
+        {
             "file": "api/controllers/classes.js",
             "line": 9,
+            "description": "Gets all the classes",
+            "itemtype": "method",
+            "name": "getAll",
             "params": [
                 {
                     "name": "req",
@@ -728,6 +757,9 @@
         {
             "file": "api/controllers/classes.js",
             "line": 28,
+            "description": "Get class by name",
+            "itemtype": "method",
+            "name": "getbyName",
             "params": [
                 {
                     "name": "req",
@@ -801,6 +833,50 @@
             "module": "api"
         },
         {
+            "file": "gameMangment/characterManager.js",
+            "line": 17,
+            "description": "stores the character in the array of active characters.",
+            "itemtype": "method",
+            "name": "addCharacter",
+            "params": [
+                {
+                    "name": "socket",
+                    "description": "",
+                    "type": "Any"
+                },
+                {
+                    "name": "character",
+                    "description": "",
+                    "type": "Any"
+                }
+            ],
+            "class": "characterManager",
+            "module": "character"
+        },
+        {
+            "file": "gameMangment/characterManager.js",
+            "line": 30,
+            "description": "removes the character from the active characters.",
+            "itemtype": "method",
+            "name": "removeCharacter",
+            "params": [
+                {
+                    "name": "socket",
+                    "description": "",
+                    "type": "Any"
+                }
+            ],
+            "class": "characterManager",
+            "module": "character"
+        },
+        {
+            "file": "out/assets/vendor/bootstrap/js/bootstrap.min.js",
+            "line": 1,
+            "description": "Bootstrap.js by @fat & @mdo\nplugins: bootstrap-transition.js, bootstrap-modal.js, bootstrap-dropdown.js, bootstrap-scrollspy.js, bootstrap-tab.js, bootstrap-tooltip.js, bootstrap-popover.js, bootstrap-affix.js, bootstrap-alert.js, bootstrap-button.js, bootstrap-collapse.js, bootstrap-carousel.js, bootstrap-typeahead.js\nCopyright 2012 Twitter, Inc.\nhttp://www.apache.org/licenses/LICENSE-2.0.txt",
+            "class": "api",
+            "module": "character"
+        },
+        {
             "file": "servers/socketServer.js",
             "line": 3,
             "class": "socketServer",
@@ -838,13 +914,6 @@
                 }
             ],
             "class": "socketServer",
-            "module": "socket"
-        },
-        {
-            "file": "server.js",
-            "line": 1,
-            "description": "This is a comment.",
-            "class": "ToDo",
             "module": "socket"
         },
         {
@@ -1001,6 +1070,10 @@
             "line": " UI/Ui.js:216"
         },
         {
+            "message": "unknown tag: validatecharctername",
+            "line": " api/controllers/character.js:88"
+        },
+        {
             "message": "unknown tag: memberof",
             "line": " gameMangment/characterManager.js:6"
         },
@@ -1069,20 +1142,16 @@
             "line": " t.js:197"
         },
         {
-            "message": "Missing item type",
-            "line": " api/controllers/classes.js:9"
+            "message": "Missing item type\nValidated the character name",
+            "line": " api/controllers/character.js:88"
         },
         {
-            "message": "Missing item type",
-            "line": " api/controllers/classes.js:28"
+            "message": "Missing item type\nBootstrap.js by @fat & @mdo\nplugins: bootstrap-transition.js, bootstrap-modal.js, bootstrap-dropdown.js, bootstrap-scrollspy.js, bootstrap-tab.js, bootstrap-tooltip.js, bootstrap-popover.js, bootstrap-affix.js, bootstrap-alert.js, bootstrap-button.js, bootstrap-collapse.js, bootstrap-carousel.js, bootstrap-typeahead.js\nCopyright 2012 Twitter, Inc.\nhttp://www.apache.org/licenses/LICENSE-2.0.txt",
+            "line": " out/assets/vendor/bootstrap/js/bootstrap.min.js:1"
         },
         {
             "message": "Missing item type",
             "line": " servers/socketServer.js:3"
-        },
-        {
-            "message": "Missing item type\nThis is a comment.",
-            "line": " server.js:1"
         },
         {
             "message": "Missing item type\nCreates an instance of ToDo.",
