@@ -41,6 +41,8 @@
     "jasmine": "^2.6.0",
     "jasmine-spec-reporter": "^4.1.0",
     "mongo-seed": "^0.6.0",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "yuidoc-bootstrap-theme": "^1.0.6",
+    "yuidoc-lucid-theme": "^0.1.2"
   }
 }

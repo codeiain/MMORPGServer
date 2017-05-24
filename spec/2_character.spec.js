@@ -1,6 +1,6 @@
 var request = require("request");
 
-var CharacterController = require('../app/controllers/character');
+var CharacterController = require('../api/controllers/character');
 var CoreServer = require("../server");
 var base_url = "http://localhost:9002/api/characters"
 

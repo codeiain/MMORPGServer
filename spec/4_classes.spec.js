@@ -1,5 +1,5 @@
 var request = require("request");
-var ClassesController = require('../app/controllers/classes');
+var ClassesController = require('../api/controllers/classes');
 var CoreServer = require('../server');
 
 var base_url = "http://localhost:9002/api/classes";

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>UI/Ui.js - MMO Server</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="MMO Server" src="../assets/css/logo.png" style="max-height: 65%;" title="MMO Server">
+            MMO Server
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>0.1.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/api", "classes/authentication", "classes/Character", "classes/characterManager", "classes/classes", "classes/race", "classes/socketServer", "classes/ToDo", "classes/UI", "classes/UIUtils", "modules/api", "modules/authentication", "modules/character", "modules/socket", "modules/startServer", "modules/UI"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/api.html">api</a></li>
+	                            <li><a href="../classes/authentication.html">authentication</a></li>
+	                            <li><a href="../classes/Character.html">Character</a></li>
+	                            <li><a href="../classes/characterManager.html">characterManager</a></li>
+	                            <li><a href="../classes/classes.html">classes</a></li>
+	                            <li><a href="../classes/race.html">race</a></li>
+	                            <li><a href="../classes/socketServer.html">socketServer</a></li>
+	                            <li><a href="../classes/ToDo.html">ToDo</a></li>
+	                            <li><a href="../classes/UI.html">UI</a></li>
+	                            <li><a href="../classes/UIUtils.html">UIUtils</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/api.html">api</a></li>
+	                            <li><a href="../modules/authentication.html">authentication</a></li>
+	                            <li><a href="../modules/character.html">character</a></li>
+	                            <li><a href="../modules/socket.html">socket</a></li>
+	                            <li><a href="../modules/startServer.html">startServer</a></li>
+	                            <li><a href="../modules/UI.html">UI</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<div class="page-header">
+    <h1>UI/Ui.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums">
+&quot;use strict&quot;;
+
+var blessed = require(&#x27;blessed&#x27;)
+    , contrib = require(&#x27;blessed-contrib&#x27;);
+var screen = blessed.screen();
+var pjson = require(&#x27;../package.json&#x27;);
+var Utils = require(&quot;./UIutils.js&quot;);
+var Logger = require(&quot;./logger.js&quot;);
+
+
+
+
+module.exports = class UI {
+
+    /**
+     * Creates an instance of UI.
+     * @constructor
+     * @class UI
+     * @description To server monitoring ui
+     * @module UI
+     */
+    constructor() {
+        this.screen = screen;
+        this.activeUsers = 0;
+        this.registeredUser = 0;
+        this.utils = new UIUtils();
+        this.log = null;
+        this.lcdActive = null;
+        this.map = null;
+        this.cpuLine = null;
+        this.tempLine = null;
+        this.map = null;
+        this.cpuUsage = {
+            title: &#x27;CPU %&#x27;,
+            style: { line: &#x27;red&#x27; },
+            x: [0],
+            y: [0]
+        };
+        this.temperatures = {
+            title: &#x27;temperature&#x27;,
+            style: { line: &#x27;red&#x27; },
+            x: [0],
+            y: [0]
+        };
+        this.startMeasure = this.utils.cpuAverage();
+        this.mapMarker = [];
+        this.logger = null;
+    }
+
+    /**
+     * creates and displayes the UI for the server
+     * @method createUI
+     * @memberof UI
+     */
+    createUI() {
+        var grid = new contrib.grid({ rows: 12, cols: 12, screen: this.screen })
+        this.lcdActive = grid.set(0, 0, 2, 2, contrib.lcd,
+            {
+                segmentWidth: 0.01 // how wide are the segments in % so 50% = 0.5
+                , segmentInterval: 0.01 // spacing between the segments in % so 50% = 0.550% = 0.5
+                , strokeWidth: 0.01 // spacing between the segments in % so 50% = 0.5
+                , elements: 4 // how many elements in the display. or how many characters can be displayed.
+                , display: 0 // what should be displayed before first call to setDisplay
+                , elementSpacing: 4 // spacing between each element
+                , elementPadding: 2 // how far away from the edges to put the elements
+                , color: &#x27;white&#x27; // color for the segments
+                , label: &#x27;Active users&#x27;
+            });
+        this.lcdActive.setDisplay(0);
+        this.lcdRegistered = grid.set(0, 2, 2, 2, contrib.lcd,
+            {
+                segmentWidth: 0.01 // how wide are the segments in % so 50% = 0.5
+                , segmentInterval: 0.01 // spacing between the segments in % so 50% = 0.550% = 0.5
+                , strokeWidth: 0.01 // spacing between the segments in % so 50% = 0.5
+                , elements: 4 // how many elements in the display. or how many characters can be displayed.
+                , display: 0 // what should be displayed before first call to setDisplay
+                , elementSpacing: 4 // spacing between each element
+                , elementPadding: 2 // how far away from the edges to put the elements
+                , color: &#x27;white&#x27; // color for the segments
+                , label: &#x27;Registered users&#x27;
+            });
+        this.lcdBuld = grid.set(0, 4, 2, 3, contrib.lcd,
+            {
+                segmentWidth: 0.01 // how wide are the segments in % so 50% = 0.5
+                , segmentInterval: 0.01 // spacing between the segments in % so 50% = 0.550% = 0.5
+                , strokeWidth: 0.01 // spacing between the segments in % so 50% = 0.5
+                , elements: 6 // how many elements in the display. or how many characters can be displayed.
+                , display: pjson.version // what should be displayed before first call to setDisplay
+                , elementSpacing: 4 // spacing between each element
+                , elementPadding: 2 // how far away from the edges to put the elements
+                , color: &#x27;white&#x27; // color for the segments
+                , label: &#x27;Current version&#x27;
+            })
+        this.cpuLine = grid.set(5, 8, 4, 4, contrib.line,
+            {
+                showNthLabel: 5
+                , maxY: 100
+                , label: &#x27;CPU usage&#x27;
+                , showLegend: true
+                , legend: { width: 10 }
+            })
+
+        this.tempLine = grid.set(9, 8, 3, 4, contrib.line,
+            {
+                showNthLabel: 5
+                , maxY: 100
+                , label: &#x27;Temperatures&#x27;
+                , showLegend: true
+                , legend: { width: 10 }
+            })
+
+        this.map = grid.set(2, 0, 10, 8, contrib.map, { label: &#x27;User locations&#x27; })
+
+        this.log = grid.set(0, 8, 5, 4, contrib.log,
+            {
+                fg: &quot;green&quot;
+                , selectedFg: &quot;green&quot;
+                , label: &#x27;Server Log&#x27;
+            })
+
+        this.logger = new Logger(this.log);
+
+        setInterval((function () {//wrap the function as object
+            //after bind, &quot;this&quot; is loop refference
+            this.updateCPU(this);
+        }).bind(this), 1000);
+
+        setInterval((function () {//wrap the function as object
+            //after bind, &quot;this&quot; is loop refference
+            this.updateTemp(this);
+        }).bind(this), 1000);
+
+        //setInterval(this.updateCPU, 1000);
+
+    };
+
+    /**
+     * updates the CPU chart
+     * @method updateCPU
+     * @memberof UI
+     */
+    updateCPU() {
+        //
+        var endMeasure = this.utils.cpuAverage();
+        var idleDifference = endMeasure.idle - this.startMeasure.idle;
+        var totalDifference = endMeasure.total - this.startMeasure.total;
+        var percentageCPU = 100 - ~~(100 * idleDifference / totalDifference);
+        this.cpuUsage.x.push(this.utils.getTime());
+        this.cpuUsage.y.push(percentageCPU);
+        this.cpuLine.setData(this.cpuUsage);
+        this.screen.render();
+        //this.logger.Error(&quot;trest&quot;);
+    }
+
+    /**
+     * updates the tempiture chart
+     * @method updateTemp
+     * @memberof UI
+     */
+    updateTemp() {
+        this.temperatures.x.push(this.utils.getTime());
+        this.temperatures.y.push(this.utils.getTemp());
+        this.tempLine.setData(this.temperatures);
+        this.screen.render();
+    }
+
+
+    /**
+     * Updates the active users led
+     * @method setActiveUsers
+     * @memberof UI
+     * 
+     * @param {number} number 
+     */
+    setActiveUsers(number) {
+        this.lcdActive.setDisplay(number);
+        this.screen.render();
+    }
+
+    /**
+     * Updates the registered users led
+     * @method setRegisteredUsers
+     * @memberof UI
+     * 
+     * @param {number} number 
+     */
+    setRegisteredUsers(number) {
+        this.lcdRegistered.setDisplay(number);
+        this.screen.render();
+    }
+
+    /**
+     * Creates a new map marker
+     * @method setMapMarker
+     * @memberof UI
+     * 
+     * @param {number} lon 
+     * @param {number} lat 
+     */
+    setMapMarker(lon, lat) {
+        this.map.clearMarkers();
+        this.mapMarker.push({
+            &quot;lon&quot;: lon,
+            &quot;lat&quot;: lat,
+            color: &quot;red&quot;,
+            char: &quot;X&quot;
+        });
+        this.logger.Debug(this.mapMarker.length);
+        for (let x = 0; x &lt; this.mapMarker.length; x++) {
+            this.logger.Debug(this.mapMarker[x].lon);
+            this.map.addMarker(this.mapMarker[x]);
+        }
+        this.screen.render();
+    }
+
+    /**
+     * Returns the logger
+     * @method getLogger
+     * @memberof UI
+     * 
+     * @returns logger
+     */
+    getLogger() {
+        return this.logger;
+    }
+}
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

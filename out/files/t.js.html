@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>t.js - MMO Server</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="MMO Server" src="../assets/css/logo.png" style="max-height: 65%;" title="MMO Server">
+            MMO Server
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>0.1.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/api", "classes/authentication", "classes/Character", "classes/characterManager", "classes/classes", "classes/race", "classes/socketServer", "classes/ToDo", "classes/UI", "classes/UIUtils", "modules/api", "modules/authentication", "modules/character", "modules/socket", "modules/startServer", "modules/UI"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/api.html">api</a></li>
+	                            <li><a href="../classes/authentication.html">authentication</a></li>
+	                            <li><a href="../classes/Character.html">Character</a></li>
+	                            <li><a href="../classes/characterManager.html">characterManager</a></li>
+	                            <li><a href="../classes/classes.html">classes</a></li>
+	                            <li><a href="../classes/race.html">race</a></li>
+	                            <li><a href="../classes/socketServer.html">socketServer</a></li>
+	                            <li><a href="../classes/ToDo.html">ToDo</a></li>
+	                            <li><a href="../classes/UI.html">UI</a></li>
+	                            <li><a href="../classes/UIUtils.html">UIUtils</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/api.html">api</a></li>
+	                            <li><a href="../modules/authentication.html">authentication</a></li>
+	                            <li><a href="../modules/character.html">character</a></li>
+	                            <li><a href="../modules/socket.html">socket</a></li>
+	                            <li><a href="../modules/startServer.html">startServer</a></li>
+	                            <li><a href="../modules/UI.html">UI</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<div class="page-header">
+    <h1>t.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums">
+/**
+ * 
+ * @class ToDo
+ * @description A class to provide functionality for a simple todo list application, this is based on the ES6 standard and would requrie to be transcribed to es5 for some browsers using a tool simmilare to babeljs.
+ *
+ */
+class ToDo {
+
+    /**
+     * Creates an instance of ToDo.
+     * @memberof ToDo
+     */
+    constructor() {
+        $.fn.editable.defaults.mode = &#x27;inline&#x27;;
+        let _self = this;
+        this.holder = $(&quot;#todo-list&quot;);
+        this.load().then(() =&gt; {
+            _self.updateAlert(&#x27;alert-success&#x27;, &#x27;Tasks have been loaded&#x27;);
+            this.makeEditable();
+            this.addClickEvent();
+            this.reloadChecked();
+        }).catch(() =&gt; {
+            _self.updateAlert(&#x27;alert-info&#x27;, &quot;No saved tasks to load&quot;);
+        });
+    };
+
+    /**
+     * 
+     * Loaded saved tasks from local storage.
+     * Will reject is there is no tasks.
+     * @returns Promise
+     * 
+     * @memberof ToDo
+     */
+    load() {
+        var _self = this;
+        return new Promise((resolve, reject) =&gt; {
+            let saved = localStorage.getItem(&#x27;todoList&#x27;);
+
+            if (saved !== null) {
+                _self.holder.html(saved);
+                return resolve();
+            } else {
+                return reject();
+            }
+
+        });
+    };
+
+    /**
+     * 
+     * Saves tasks to local storage.
+     * @returns Promise
+     * 
+     * @memberof ToDo
+     */
+    save() {
+        var _self = this;
+        return new Promise((resolve, reject) =&gt; {
+            let toSave = _self.holder.html();
+            if (toSave !== undefined &amp;&amp; toSave !== null) {
+                localStorage.setItem(&#x27;todoList&#x27;, toSave);
+                return resolve();
+            } else {
+                return reject();
+            }
+        });
+    };
+
+    /**
+     * 
+     * Displays an alert with the status and description passed in.
+     * The alert will be dismissed after 3 seconds.
+     * I would like to change this to a toast msg.
+     * @param {any} status - alert status can be one of the following alert-success alert-info alert-warning alert-danger
+     * @param {any} description - the text to display in the alert.
+     * 
+     * @memberof ToDo
+     */
+    updateAlert(status, description) {
+        let validStatus = [&#x27;alert-success&#x27;, &#x27;alert-info&#x27;, &#x27;alert-warning&#x27;, &#x27;alert-danger&#x27;];
+        if (jQuery.inArray(status, validStatus) != -1) {
+            $(&#x27;#alert&#x27;).show();
+            $(&#x27;#alert&#x27;).removeClass(&#x27;alert-success alert-info alert-warning alert-danger&#x27;);
+            $(&#x27;#alert&#x27;).addClass(status);
+            $(&#x27;#alertContent&#x27;).text(description);
+            setTimeout(() =&gt; {
+                $(&#x27;#alert&#x27;).hide();
+            }, 3000);
+        } else {
+            throw &#x27;invalid status only alert-success, alert-info, alert-warning, alert-danger&#x27;;
+        }
+    };
+
+    /**
+     * 
+     * Creates a new todo list item 
+     * 
+     * @param {any} task the text to display
+     * 
+     * @memberof ToDo
+     */
+    createTodoItem(task) {
+
+        var inputs = this.holder.find(&#x27;input&#x27;);
+        var id = inputs.length + 1;
+        this.holder.append()
+        let li = $(&#x27;&lt;li /&gt;&#x27;, {
+            class: &#x27;list-group-item&#x27;
+        }).appendTo(this.holder);
+
+        let checkBox = $(&#x27;&lt;input /&gt;&#x27;, {
+            type: &#x27;checkbox&#x27;,
+            id: &#x27;cb&#x27; + id,
+            value: task,
+        });
+
+        checkBox.appendTo(li);
+
+        $(&#x27;&lt;a /&gt;&#x27;, {
+            text: task,
+            id: &#x27;text_&#x27; + id,
+            &#x27;class&#x27;: &#x27;editable editable-click editable-open &#x27;
+        }).appendTo(li);
+
+        this.makeEditable();
+        this.addClickEvent();
+        //&lt;span class=&quot;glyphicon glyphicon-align-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+    };
+
+    /**
+     * 
+     * Displays if the input field is valud of not.
+     * @param {any} domElement - the dom element to check, current validation is only the dom element has a value.
+     * 
+     * @memberof ToDo
+     */
+    updateStatus(domElement) {
+        let _self = domElement;
+        if (_self.val().trim() !== &quot;&quot;) {
+            _self.parent().removeClass(&#x27;has-error&#x27;).addClass(&#x27;has-success&#x27;);
+        } else {
+            _self.parent().removeClass(&#x27;has-success&#x27;).addClass(&#x27;has-error&#x27;);
+        }
+    }
+
+    /**
+     * 
+     * This function applies the editable functionality to the todo items.
+     * This is due to the editor not being applied when loading the items from local storage.
+     * @memberof ToDo
+     */
+    makeEditable() {
+        var inputs = this.holder.find(&#x27;input&#x27;);
+        var id = inputs.length;
+        for (let i = 0; i &lt; id; i++) {
+            $(&#x27;#text_&#x27; + i).editable({
+                type: &#x27;text&#x27;,
+                pk: 1,
+                url: &#x27;&#x27;,
+                title: &#x27;Edit Task&#x27;
+            });
+        }
+    }
+
+    /**
+     * 
+     * Binds the click event to all checkboxs
+     * This is due to dynamic events not being attached when reloading the list from local storage
+     * @memberof ToDo
+     */
+    addClickEvent() {
+        $(&#x27;:checkbox&#x27;).click((event) =&gt; {
+            let _self = $(event.currentTarget);
+            if (_self[0].checked) {
+                _self.parent().addClass(&#x27;done&#x27;);
+            } else {
+                _self.parent().removeClass(&#x27;done&#x27;);
+            }
+        });
+    }
+
+    /**
+     * 
+     * loops through all the checkboxs and reapplies the checked to them as this is lost when reloading from local storage.
+     * 
+     * @memberof ToDo
+     */
+    reloadChecked() {
+        $.each($(&#x27;:checkbox&#x27;), (index, element) =&gt; {
+            if ($(element).parent().hasClass(&#x27;done&#x27;)) {
+                $(element)[0].checked = true;
+            }
+        });
+    }
+
+    /**
+     * 
+     * Clears the inner html of the todolist.
+     * @todo Should we clear the local storage when clearing the todo list?
+     * 
+     * @memberof ToDo
+     */
+    clear() {
+    debugger;
+        this.holder.html(&quot;&quot;);
+    }
+
+}
+
+
+$(document).ready(function () {
+    // create a new instance of the ToDo class
+    todo = new ToDo();
+
+
+    $(&quot;#addTask&quot;).click(() =&gt; {
+        let text = $(&quot;#todo-text&quot;).val();
+        if (text.trim() !== &quot;&quot;) {
+            todo.createTodoItem(text);
+        }
+        $(&quot;#todo-text&quot;).val(&quot;&quot;);
+        todo.updateStatus($(&quot;#todo-text&quot;));
+    })
+
+    $(&#x27;#todo-text&#x27;).keyup((event) =&gt; {
+        todo.updateStatus($(event.currentTarget));
+    })
+
+    $(&#x27;#saveTasks&#x27;).click(() =&gt; {
+        todo.save().then(() =&gt; {
+            todo.updateAlert(&#x27;alert-success&#x27;, &#x27;Tasks have been saved&#x27;);
+        }).catch(() =&gt; {
+            todo.updateAlert(&#x27;alert-error&#x27;, &quot;Sorry can&#x27;t save your tasks right now&quot;);
+        });
+    })
+
+    $(&#x27;#clearTasks&#x27;).click(() =&gt; {
+        todo.clear();
+    });
+});
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>
