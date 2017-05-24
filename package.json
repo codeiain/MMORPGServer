@@ -4,7 +4,7 @@
   "description": "node server for mmo rpg",
   "main": "server.js",
   "scripts": {
-    "start": "NODE_ENV=dev node server.js",
+    "start": "NODE_ENV=test node server.js",
     "test": "NODE_ENV=test jasmine"
   },
   "repository": {

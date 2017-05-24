@@ -7,6 +7,7 @@ var base_url = "http://localhost:9002/api/characters"
 describe("Character API Tests", function() {
 
     it("Post /getPlayerCharacters returns status code 200", function() {
+        CoreServer.init('test');
         var user = {
             email: "testemail1@test.com",
             password: "testpassword"

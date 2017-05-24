@@ -7,8 +7,8 @@ var classes = require('../models/classes');
 
 
 /**
- * 
- * 
+ * Gets all the classes
+ * @method getAll
  * @param {any} req 
  * @param {any} res 
  * @param {any} next 
@@ -26,8 +26,8 @@ exports.getAll = function(req, res, next){
 }
 
 /**
- * 
- * 
+ * Get class by name
+ * @method getbyName
  * @param {any} req 
  * @param {any} res 
  * @param {any} next 

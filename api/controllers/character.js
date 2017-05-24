@@ -64,7 +64,7 @@ exports.save = function(req, res, next) {
 };
 
 /**
- * Description
+ * gets the users characters
  * @method getCharactersForUser
  * @param {} req
  * @param {} res
@@ -85,6 +85,13 @@ exports.getCharactersForUser = function(req, res, next) {
     })
 }
 
+/**
+ * Validated the character name
+ * @validateCharcterName
+ * @param {any} req 
+ * @param {any} res 
+ * @param {any} next 
+ */
 exports.validateCharacterName = function(req, res, next) {
     var Name = req.body.characterName;
 
