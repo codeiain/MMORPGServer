@@ -1,6 +1,6 @@
 var request = require("request");
 
-var CharacterController = require('../app/controllers/authentication');
+var CharacterController = require('../api/controllers/authentication');
 var CoreServer = require("../server");
 
 var base_url = "http://localhost:9002/api/auth"

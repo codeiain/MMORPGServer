@@ -1,0 +1,7 @@
+{
+    "database":"mongodb://localhost/local-dev",
+    "secret":"eypZAZy0CY^g9%KreypZAZy0CY^g9%Kr",
+    "api":9001,
+    "socket":9010,
+    "chat":9020
+}

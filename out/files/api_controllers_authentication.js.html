@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>api/controllers/authentication.js - MMO Server</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+	    <img alt="MMO Server" src="../assets/css/logo.png" style="max-height: 65%;" title="MMO Server">
+            MMO Server
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>0.1.0</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/api", "classes/authentication", "classes/Character", "classes/characterManager", "classes/classes", "classes/race", "classes/socketServer", "classes/ToDo", "classes/UI", "classes/UIUtils", "modules/api", "modules/authentication", "modules/character", "modules/socket", "modules/startServer", "modules/UI"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <h3>APIs</h3>
+	        <div id="sidebar">
+	            <ul id="main-nav" class="nav nav-tabs" style="margin-bottom:0;">
+	                <li class="active"><a href="#classes" data-toggle="tab">Classes</a></li>
+	                <li><a href="#modules" data-toggle="tab">Modules</a></li>
+	            </ul>
+	    
+	            <div id="api-tabview-filter">
+	                <input type="search" placeholder="Type to filter APIs">
+	            </div>
+	    
+	            <div class="tab-content" style="border: 1px solid #DDD; border-top:0;">
+	                <div class="tab-pane active" id="classes">
+	                    <ul id="api-classes" class="nav nav-list">
+	                            <li><a href="../classes/api.html">api</a></li>
+	                            <li><a href="../classes/authentication.html">authentication</a></li>
+	                            <li><a href="../classes/Character.html">Character</a></li>
+	                            <li><a href="../classes/characterManager.html">characterManager</a></li>
+	                            <li><a href="../classes/classes.html">classes</a></li>
+	                            <li><a href="../classes/race.html">race</a></li>
+	                            <li><a href="../classes/socketServer.html">socketServer</a></li>
+	                            <li><a href="../classes/ToDo.html">ToDo</a></li>
+	                            <li><a href="../classes/UI.html">UI</a></li>
+	                            <li><a href="../classes/UIUtils.html">UIUtils</a></li>
+	                    </ul>
+	                </div>
+	    
+	                <div class="tab-pane" id="modules">
+	                    <ul id="api-modules" class="nav nav-list">
+	                            <li><a href="../modules/api.html">api</a></li>
+	                            <li><a href="../modules/authentication.html">authentication</a></li>
+	                            <li><a href="../modules/character.html">character</a></li>
+	                            <li><a href="../modules/socket.html">socket</a></li>
+	                            <li><a href="../modules/startServer.html">startServer</a></li>
+	                            <li><a href="../modules/UI.html">UI</a></li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<div class="page-header">
+    <h1>api/controllers/authentication.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums">
+/**
+@class authentication
+@module api
+*/
+
+
+var jwt = require(&#x27;jsonwebtoken&#x27;);
+var User = require(&#x27;../models/user&#x27;);
+//var authConfig = require(&#x27;../../config/auth&#x27;);
+var configProvider = require(&#x27;../../configProvider&#x27;);
+var config = new configProvider();
+
+/**
+ *  generate a JWT Token
+ * @method generateToken
+ * @param {user} user
+ * @return CallExpression
+ */
+function generateToken(user) {
+    config.load().then((config) =&gt; {
+        return jwt.sign(user, config.secret, {
+            expiresIn: 10080
+        });
+    });
+
+}
+
+/**
+ *  creates new user object
+ * @method setUserInfo
+ * @param {User} request
+ * @return ObjectExpression
+ */
+function setUserInfo(request) {
+    return {
+        _id: request._id,
+        email: request.email,
+        role: request.role
+    };
+}
+
+function countUsers(callback) {
+    User.find({}, function (err, users) {
+        callback(users.length);
+    });
+}
+
+/**
+ * logs the user in
+ * @method login
+ * 
+ * @param {req} req
+ * @param {} res
+ * @param {} next
+ */
+exports.login = function (req, res, next) {
+
+    var userInfo = setUserInfo(req.user);
+    res.status(200).json({
+        token: &#x27;JWT &#x27; + generateToken(userInfo),
+        user: userInfo
+    });
+
+}
+
+/**
+ * registers the user
+ * @method register
+ * @param {} req
+ * @param {} res
+ * @param {} next
+ */
+exports.register = function (req, res, next) {
+
+    var email = req.body.email;
+    var password = req.body.password;
+    var role = req.body.role;
+
+    if (!email) {
+        return res.status(422).send({ error: &#x27;You must enter an email address&#x27; });
+    }
+
+    if (!password) {
+        return res.status(422).send({ error: &#x27;You must enter a password&#x27; });
+    }
+
+    User.findOne({ emai: email }, function (err, existingUser) {
+        if (err) {
+            return next(err);
+        }
+
+        if (existingUser) {
+            return res.status(422).send({ error: &#x27;That email address is already in use&#x27; });
+        }
+
+        var user = new User({
+            email: email,
+            password: password,
+            role: role
+        });
+
+        user.save(function (err, user) {
+            registeredUsers++;
+            if (err) {
+                return next(err);
+            }
+
+            var userInfo = setUserInfo(user);
+            res.status(201).json({
+                token: &#x27;JWT &#x27; + generateToken(userInfo),
+                user: userInfo
+            })
+        });
+    });
+}
+
+/**
+ * checks the roles passed in on an api call
+ * @method roleAuthorization
+ * @param {} roles
+ * @return FunctionExpression
+ */
+exports.roleAuthorization = function (roles) {
+    return function (req, res, next) {
+
+        var user = req.user;
+
+        User.findById(user._id, function (err, foundUser) {
+
+            if (err) {
+                res.status(422).json({ error: &#x27;No user found.&#x27; });
+                return next(err);
+            }
+
+            if (roles.indexOf(foundUser.role) &gt; -1) {
+                return next();
+            }
+
+            res.status(401).json({ error: &#x27;You are not authorized to view this content&#x27; });
+            return next(&#x27;Unauthorized&#x27;);
+
+        });
+
+    }
+
+}
+
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

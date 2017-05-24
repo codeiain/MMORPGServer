@@ -1,0 +1,1128 @@
+{
+    "project": {
+        "name": "MMO Server",
+        "url": "www.example.com",
+        "version": "0.1.0",
+        "description": "node server for mmo rpg"
+    },
+    "files": {
+        "UI/UIutils.js": {
+            "name": "UI/UIutils.js",
+            "modules": {
+                "UI": 1
+            },
+            "classes": {
+                "UIUtils": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "UI/Ui.js": {
+            "name": "UI/Ui.js",
+            "modules": {},
+            "classes": {
+                "UI": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "api/controllers/authentication.js": {
+            "name": "api/controllers/authentication.js",
+            "modules": {},
+            "classes": {
+                "authentication": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "api/controllers/character.js": {
+            "name": "api/controllers/character.js",
+            "modules": {},
+            "classes": {
+                "Character": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "api/controllers/classes.js": {
+            "name": "api/controllers/classes.js",
+            "modules": {},
+            "classes": {
+                "classes": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "api/controllers/race.js": {
+            "name": "api/controllers/race.js",
+            "modules": {},
+            "classes": {
+                "race": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "api/models/character.js": {
+            "name": "api/models/character.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "api/models/user.js": {
+            "name": "api/models/user.js",
+            "modules": {
+                "authentication": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "gameMangment/characterManager.js": {
+            "name": "gameMangment/characterManager.js",
+            "modules": {
+                "character": 1
+            },
+            "classes": {
+                "characterManager": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "servers/apiServer.js": {
+            "name": "servers/apiServer.js",
+            "modules": {
+                "api": 1,
+                "startServer": 1
+            },
+            "classes": {
+                "api": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "servers/socketServer.js": {
+            "name": "servers/socketServer.js",
+            "modules": {
+                "socket": 1
+            },
+            "classes": {
+                "socketServer": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "server.js": {
+            "name": "server.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "t.js": {
+            "name": "t.js",
+            "modules": {},
+            "classes": {
+                "ToDo": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "UI": {
+            "name": "UI",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "UIUtils": 1,
+                "UI": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "UI/Ui.js",
+            "line": 15
+        },
+        "api": {
+            "name": "api",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "authentication": 1,
+                "Character": 1,
+                "classes": 1,
+                "race": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "api/controllers/race.js",
+            "line": 1,
+            "description": "Creates an instance of rest api server"
+        },
+        "authentication": {
+            "name": "authentication",
+            "submodules": {},
+            "elements": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "api/models/user.js",
+            "line": 57,
+            "description": "Description",
+            "itemtype": "method",
+            "params": [
+                {
+                    "name": "passwordAttempt",
+                    "description": ""
+                },
+                {
+                    "name": "cb",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            }
+        },
+        "character": {
+            "name": "character",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "characterManager": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "gameMangment/characterManager.js",
+            "line": 6,
+            "description": "Creates an instance of characterManger."
+        },
+        "startServer": {
+            "name": "startServer",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "api": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "servers/apiServer.js",
+            "line": 3,
+            "description": "starts the API server"
+        },
+        "socket": {
+            "name": "socket",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "socketServer": 1,
+                "ToDo": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "t.js",
+            "line": 1,
+            "description": "Manages ingame socket menthods"
+        }
+    },
+    "classes": {
+        "UIUtils": {
+            "name": "UIUtils",
+            "shortname": "UIUtils",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "UI",
+            "file": "UI/UIutils.js",
+            "line": 5
+        },
+        "UI": {
+            "name": "UI",
+            "shortname": "UI",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "UI",
+            "namespace": "",
+            "file": "UI/Ui.js",
+            "line": 15,
+            "description": "Creates an instance of UI.",
+            "is_constructor": 1
+        },
+        "authentication": {
+            "name": "authentication",
+            "shortname": "authentication",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "api",
+            "namespace": "",
+            "file": "api/controllers/authentication.js",
+            "line": 1
+        },
+        "Character": {
+            "name": "Character",
+            "shortname": "Character",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "api",
+            "namespace": "",
+            "file": "api/controllers/character.js",
+            "line": 1
+        },
+        "classes": {
+            "name": "classes",
+            "shortname": "classes",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "api",
+            "namespace": "",
+            "file": "api/controllers/classes.js",
+            "line": 2
+        },
+        "race": {
+            "name": "race",
+            "shortname": "race",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "api",
+            "namespace": "",
+            "file": "api/controllers/race.js",
+            "line": 1
+        },
+        "characterManager": {
+            "name": "characterManager",
+            "shortname": "characterManager",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "character",
+            "namespace": "",
+            "file": "gameMangment/characterManager.js",
+            "line": 6,
+            "description": "Creates an instance of characterManger.",
+            "memberof": "characterManager"
+        },
+        "api": {
+            "name": "api",
+            "shortname": "api",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "startServer",
+            "namespace": "",
+            "file": "servers/apiServer.js",
+            "line": 3,
+            "description": "Creates an instance of rest api server",
+            "is_constructor": 1,
+            "memberof": "api",
+            "params": [
+                {
+                    "name": "config",
+                    "description": "",
+                    "type": "Any"
+                },
+                {
+                    "name": "ui",
+                    "description": "",
+                    "type": "Any"
+                },
+                {
+                    "name": "logger",
+                    "description": "",
+                    "type": "Any"
+                }
+            ]
+        },
+        "socketServer": {
+            "name": "socketServer",
+            "shortname": "socketServer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "socket",
+            "namespace": "",
+            "file": "servers/socketServer.js",
+            "line": 10,
+            "description": "Creates an instance of socketServer.",
+            "is_constructor": 1,
+            "memberof": "socketServer",
+            "params": [
+                {
+                    "name": "config",
+                    "description": "",
+                    "type": "Any"
+                },
+                {
+                    "name": "ui",
+                    "description": "",
+                    "type": "Any"
+                },
+                {
+                    "name": "logger",
+                    "description": "",
+                    "type": "Any"
+                }
+            ]
+        },
+        "ToDo": {
+            "name": "ToDo",
+            "shortname": "ToDo",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "socket",
+            "namespace": "",
+            "file": "t.js",
+            "line": 1,
+            "description": "A class to provide functionality for a simple todo list application, this is based on the ES6 standard and would requrie to be transcribed to es5 for some browsers using a tool simmilare to babeljs."
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "UI/UIutils.js",
+            "line": 13,
+            "description": "cpuAverage works out average cpu usage",
+            "itemtype": "method",
+            "name": "cpuAverage",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "UIUtils",
+            "module": "UI"
+        },
+        {
+            "file": "UI/UIutils.js",
+            "line": 44,
+            "description": "return the current time",
+            "itemtype": "method",
+            "name": "getTime",
+            "return": {
+                "description": "yy:mm:ss",
+                "type": "String"
+            },
+            "class": "UIUtils",
+            "module": "UI"
+        },
+        {
+            "file": "UI/UIutils.js",
+            "line": 65,
+            "description": "returns the curretn cpu temp only works on linux",
+            "itemtype": "method",
+            "name": "getTemp",
+            "return": {
+                "description": "temp",
+                "type": "String"
+            },
+            "class": "UIUtils",
+            "module": "UI"
+        },
+        {
+            "file": "UI/Ui.js",
+            "line": 50,
+            "description": "creates and displayes the UI for the server",
+            "itemtype": "method",
+            "name": "createUI",
+            "memberof": "UI",
+            "class": "UI",
+            "module": "UI"
+        },
+        {
+            "file": "UI/Ui.js",
+            "line": 137,
+            "description": "updates the CPU chart",
+            "itemtype": "method",
+            "name": "updateCPU",
+            "memberof": "UI",
+            "class": "UI",
+            "module": "UI"
+        },
+        {
+            "file": "UI/Ui.js",
+            "line": 155,
+            "description": "updates the tempiture chart",
+            "itemtype": "method",
+            "name": "updateTemp",
+            "memberof": "UI",
+            "class": "UI",
+            "module": "UI"
+        },
+        {
+            "file": "UI/Ui.js",
+            "line": 168,
+            "description": "Updates the active users led",
+            "itemtype": "method",
+            "name": "setActiveUsers",
+            "memberof": "UI",
+            "params": [
+                {
+                    "name": "number",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "class": "UI",
+            "module": "UI"
+        },
+        {
+            "file": "UI/Ui.js",
+            "line": 180,
+            "description": "Updates the registered users led",
+            "itemtype": "method",
+            "name": "setRegisteredUsers",
+            "memberof": "UI",
+            "params": [
+                {
+                    "name": "number",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "class": "UI",
+            "module": "UI"
+        },
+        {
+            "file": "UI/Ui.js",
+            "line": 192,
+            "description": "Creates a new map marker",
+            "itemtype": "method",
+            "name": "setMapMarker",
+            "memberof": "UI",
+            "params": [
+                {
+                    "name": "lon",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "lat",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "class": "UI",
+            "module": "UI"
+        },
+        {
+            "file": "UI/Ui.js",
+            "line": 216,
+            "description": "Returns the logger",
+            "itemtype": "method",
+            "name": "getLogger",
+            "memberof": "UI",
+            "return": {
+                "description": "logger"
+            },
+            "class": "UI",
+            "module": "UI"
+        },
+        {
+            "file": "api/controllers/authentication.js",
+            "line": 13,
+            "description": "generate a JWT Token",
+            "itemtype": "method",
+            "name": "generateToken",
+            "params": [
+                {
+                    "name": "user",
+                    "description": "",
+                    "type": "User"
+                }
+            ],
+            "return": {
+                "description": "CallExpression"
+            },
+            "class": "authentication",
+            "module": "api"
+        },
+        {
+            "file": "api/controllers/authentication.js",
+            "line": 28,
+            "description": "creates new user object",
+            "itemtype": "method",
+            "name": "setUserInfo",
+            "params": [
+                {
+                    "name": "request",
+                    "description": "",
+                    "type": "User"
+                }
+            ],
+            "return": {
+                "description": "ObjectExpression"
+            },
+            "class": "authentication",
+            "module": "api"
+        },
+        {
+            "file": "api/controllers/authentication.js",
+            "line": 48,
+            "description": "logs the user in",
+            "itemtype": "method",
+            "name": "login",
+            "params": [
+                {
+                    "name": "req",
+                    "description": "",
+                    "type": "Req"
+                },
+                {
+                    "name": "res",
+                    "description": ""
+                },
+                {
+                    "name": "next",
+                    "description": ""
+                }
+            ],
+            "class": "authentication",
+            "module": "api"
+        },
+        {
+            "file": "api/controllers/authentication.js",
+            "line": 66,
+            "description": "registers the user",
+            "itemtype": "method",
+            "name": "register",
+            "params": [
+                {
+                    "name": "req",
+                    "description": ""
+                },
+                {
+                    "name": "res",
+                    "description": ""
+                },
+                {
+                    "name": "next",
+                    "description": ""
+                }
+            ],
+            "class": "authentication",
+            "module": "api"
+        },
+        {
+            "file": "api/controllers/authentication.js",
+            "line": 117,
+            "description": "checks the roles passed in on an api call",
+            "itemtype": "method",
+            "name": "roleAuthorization",
+            "params": [
+                {
+                    "name": "roles",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "FunctionExpression"
+            },
+            "class": "authentication",
+            "module": "api"
+        },
+        {
+            "file": "api/controllers/character.js",
+            "line": 9,
+            "description": "Description saves the character",
+            "itemtype": "method",
+            "name": "save",
+            "params": [
+                {
+                    "name": "req",
+                    "description": ""
+                },
+                {
+                    "name": "res",
+                    "description": ""
+                },
+                {
+                    "name": "next",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Character",
+            "module": "api"
+        },
+        {
+            "file": "api/controllers/character.js",
+            "line": 66,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getCharactersForUser",
+            "params": [
+                {
+                    "name": "req",
+                    "description": ""
+                },
+                {
+                    "name": "res",
+                    "description": ""
+                },
+                {
+                    "name": "next",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Character",
+            "module": "api"
+        },
+        {
+            "file": "api/controllers/classes.js",
+            "line": 9,
+            "params": [
+                {
+                    "name": "req",
+                    "description": "",
+                    "type": "Any"
+                },
+                {
+                    "name": "res",
+                    "description": "",
+                    "type": "Any"
+                },
+                {
+                    "name": "next",
+                    "description": "",
+                    "type": "Any"
+                }
+            ],
+            "class": "classes",
+            "module": "api"
+        },
+        {
+            "file": "api/controllers/classes.js",
+            "line": 28,
+            "params": [
+                {
+                    "name": "req",
+                    "description": "",
+                    "type": "Any"
+                },
+                {
+                    "name": "res",
+                    "description": "",
+                    "type": "Any"
+                },
+                {
+                    "name": "next",
+                    "description": "",
+                    "type": "Any"
+                }
+            ],
+            "class": "classes",
+            "module": "api"
+        },
+        {
+            "file": "api/controllers/race.js",
+            "line": 9,
+            "description": "Gets all races",
+            "itemtype": "method",
+            "name": "getAll",
+            "params": [
+                {
+                    "name": "req",
+                    "description": ""
+                },
+                {
+                    "name": "res",
+                    "description": ""
+                },
+                {
+                    "name": "next",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "race",
+            "module": "api"
+        },
+        {
+            "file": "api/controllers/race.js",
+            "line": 29,
+            "description": "gets the race by its type",
+            "itemtype": "method",
+            "name": "getByType",
+            "params": [
+                {
+                    "name": "req",
+                    "description": ""
+                },
+                {
+                    "name": "res",
+                    "description": ""
+                },
+                {
+                    "name": "next",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "race",
+            "module": "api"
+        },
+        {
+            "file": "servers/socketServer.js",
+            "line": 3,
+            "class": "socketServer",
+            "module": "startServer"
+        },
+        {
+            "file": "servers/socketServer.js",
+            "line": 57,
+            "description": "sends changes to characters to all other players",
+            "itemtype": "method",
+            "name": "characterUpdated",
+            "memberof": "socketServer",
+            "params": [
+                {
+                    "name": "character",
+                    "description": "",
+                    "type": "Any"
+                }
+            ],
+            "class": "socketServer",
+            "module": "socket"
+        },
+        {
+            "file": "servers/socketServer.js",
+            "line": 68,
+            "description": "gets the user location based on there ip and creates a new map marker",
+            "itemtype": "method",
+            "name": "getUserLocation",
+            "memberof": "socketServer",
+            "params": [
+                {
+                    "name": "ip",
+                    "description": "",
+                    "type": "Any"
+                }
+            ],
+            "class": "socketServer",
+            "module": "socket"
+        },
+        {
+            "file": "server.js",
+            "line": 1,
+            "description": "This is a comment.",
+            "class": "ToDo",
+            "module": "socket"
+        },
+        {
+            "file": "t.js",
+            "line": 9,
+            "description": "Creates an instance of ToDo.",
+            "memberof": "ToDo",
+            "class": "ToDo",
+            "module": "socket"
+        },
+        {
+            "file": "t.js",
+            "line": 27,
+            "description": "Loaded saved tasks from local storage.\n Will reject is there is no tasks.",
+            "return": {
+                "description": "Promise"
+            },
+            "memberof": "ToDo",
+            "class": "ToDo",
+            "module": "socket"
+        },
+        {
+            "file": "t.js",
+            "line": 50,
+            "description": "Saves tasks to local storage.",
+            "return": {
+                "description": "Promise"
+            },
+            "memberof": "ToDo",
+            "class": "ToDo",
+            "module": "socket"
+        },
+        {
+            "file": "t.js",
+            "line": 70,
+            "description": "Displays an alert with the status and description passed in.\n The alert will be dismissed after 3 seconds.\n I would like to change this to a toast msg.",
+            "params": [
+                {
+                    "name": "status",
+                    "description": "- alert status can be one of the following alert-success alert-info alert-warning alert-danger",
+                    "type": "Any"
+                },
+                {
+                    "name": "description",
+                    "description": "- the text to display in the alert.",
+                    "type": "Any"
+                }
+            ],
+            "memberof": "ToDo",
+            "class": "ToDo",
+            "module": "socket"
+        },
+        {
+            "file": "t.js",
+            "line": 95,
+            "description": "Creates a new todo list item",
+            "params": [
+                {
+                    "name": "task",
+                    "description": "the text to display",
+                    "type": "Any"
+                }
+            ],
+            "memberof": "ToDo",
+            "class": "ToDo",
+            "module": "socket"
+        },
+        {
+            "file": "t.js",
+            "line": 131,
+            "description": "Displays if the input field is valud of not.",
+            "params": [
+                {
+                    "name": "domElement",
+                    "description": "- the dom element to check, current validation is only the dom element has a value.",
+                    "type": "Any"
+                }
+            ],
+            "memberof": "ToDo",
+            "class": "ToDo",
+            "module": "socket"
+        },
+        {
+            "file": "t.js",
+            "line": 147,
+            "description": "This function applies the editable functionality to the todo items.\n This is due to the editor not being applied when loading the items from local storage.",
+            "memberof": "ToDo",
+            "class": "ToDo",
+            "module": "socket"
+        },
+        {
+            "file": "t.js",
+            "line": 166,
+            "description": "Binds the click event to all checkboxs\n This is due to dynamic events not being attached when reloading the list from local storage",
+            "memberof": "ToDo",
+            "class": "ToDo",
+            "module": "socket"
+        },
+        {
+            "file": "t.js",
+            "line": 183,
+            "description": "loops through all the checkboxs and reapplies the checked to them as this is lost when reloading from local storage.",
+            "memberof": "ToDo",
+            "class": "ToDo",
+            "module": "socket"
+        },
+        {
+            "file": "t.js",
+            "line": 197,
+            "description": "Clears the inner html of the todolist.",
+            "todo": [
+                "Should we clear the local storage when clearing the todo list?"
+            ],
+            "memberof": "ToDo",
+            "class": "ToDo",
+            "module": "socket"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " UI/UIutils.js:13"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " UI/Ui.js:50"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " UI/Ui.js:137"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " UI/Ui.js:155"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " UI/Ui.js:168"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " UI/Ui.js:180"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " UI/Ui.js:192"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " UI/Ui.js:216"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " UI/Ui.js:216"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " gameMangment/characterManager.js:6"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " servers/apiServer.js:3"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " servers/socketServer.js:10"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " servers/socketServer.js:57"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " servers/socketServer.js:68"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " t.js:9"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " t.js:27"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " t.js:27"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " t.js:50"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " t.js:50"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " t.js:70"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " t.js:95"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " t.js:131"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " t.js:147"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " t.js:166"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " t.js:183"
+        },
+        {
+            "message": "unknown tag: memberof",
+            "line": " t.js:197"
+        },
+        {
+            "message": "Missing item type",
+            "line": " api/controllers/classes.js:9"
+        },
+        {
+            "message": "Missing item type",
+            "line": " api/controllers/classes.js:28"
+        },
+        {
+            "message": "Missing item type",
+            "line": " servers/socketServer.js:3"
+        },
+        {
+            "message": "Missing item type\nThis is a comment.",
+            "line": " server.js:1"
+        },
+        {
+            "message": "Missing item type\nCreates an instance of ToDo.",
+            "line": " t.js:9"
+        },
+        {
+            "message": "Missing item type\nLoaded saved tasks from local storage.\n Will reject is there is no tasks.",
+            "line": " t.js:27"
+        },
+        {
+            "message": "Missing item type\nSaves tasks to local storage.",
+            "line": " t.js:50"
+        },
+        {
+            "message": "Missing item type\nDisplays an alert with the status and description passed in.\n The alert will be dismissed after 3 seconds.\n I would like to change this to a toast msg.",
+            "line": " t.js:70"
+        },
+        {
+            "message": "Missing item type\nCreates a new todo list item",
+            "line": " t.js:95"
+        },
+        {
+            "message": "Missing item type\nDisplays if the input field is valud of not.",
+            "line": " t.js:131"
+        },
+        {
+            "message": "Missing item type\nThis function applies the editable functionality to the todo items.\n This is due to the editor not being applied when loading the items from local storage.",
+            "line": " t.js:147"
+        },
+        {
+            "message": "Missing item type\nBinds the click event to all checkboxs\n This is due to dynamic events not being attached when reloading the list from local storage",
+            "line": " t.js:166"
+        },
+        {
+            "message": "Missing item type\nloops through all the checkboxs and reapplies the checked to them as this is lost when reloading from local storage.",
+            "line": " t.js:183"
+        },
+        {
+            "message": "Missing item type\nClears the inner html of the todolist.",
+            "line": " t.js:197"
+        }
+    ]
+}

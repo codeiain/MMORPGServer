@@ -3,7 +3,7 @@
     "url": "www.example.com",
     "version": "0.1.0",
     "options": {
-        "themedir": "node_modules/yuidoc-lucid-theme",
-        "helpers": ["node_modules/yuidoc-lucid-theme/helpers/helpers.js"]
+        "themedir": "node_modules/yuidoc-bootstrap-theme",
+        "helpers": ["node_modules/yuidoc-bootstrap-theme/helpers/helpers.js"]
     }
 }

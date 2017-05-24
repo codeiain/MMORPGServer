@@ -1,6 +1,6 @@
 var request = require("request");
 var path = require('path');
-var RaceController = require('../app/controllers/race');
+var RaceController = require('../api/controllers/race');
 var CoreServer = require("../server");
 
 var base_url = "http://localhost:9002/api/races";

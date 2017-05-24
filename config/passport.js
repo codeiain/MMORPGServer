@@ -1,6 +1,5 @@
 var passport = require('passport');
-var User = require('../app/models/user');
-var config = require('./auth');
+var User = require('../api/models/user');
 var JwtStrategy = require('passport-jwt').Strategy;
 var ExtractJwt = require('passport-jwt').ExtractJwt;
 var LocalStrategy = require('passport-local').Strategy;
@@ -38,7 +37,7 @@ var localLogin = new LocalStrategy(localOptions, function(email, password, done)
 
 var jwtOptions = {
     jwtFromRequest: ExtractJwt.fromAuthHeader(),
-    secretOrKey: config.secret
+    secretOrKey: 'eypZAZy0CY^g9%KreypZAZy0CY^g9%Kr'
 }
 
 
